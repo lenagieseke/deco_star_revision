@@ -22,14 +22,9 @@ The generation of repetitive pattern designs and an overall distribution of elem
 For procedural texture generation, stochastic textures have been the foundation of both research investigations and many complex models. Stochastic textures are generated with noise functions, and \citeauthor*{lagae_2010_sap}~\cite{lagae_2010_sap} present the state of the art for work before the year 2010. In terms of the controllability of the textures, the authors identify three main approaches. First, the indirect access to the noise through the control of the power spectrum. Second, the direct access to its appearance through function parameters, and 
 third, example-based techniques. The first two approaches are based on specific function characteristics and are hardly generalizable for creative pattern generation. Also, in the context of stochastic pattern, the control of a model often directly derives from a new model definition, and the focus of the related work is usually the latter.
 
-% The following investigation is roughly sorted by increasing expressiveness.
 
 \paragraph*{Example-Based}
 \label{para:analysis_stochastic_examplebased_control}
-
-% For Gaussian-like textures, the input analysis and function parameter derivation methods are specific to the targeted noise functions. 
-
-% In addition to performance and input requirements as common characteristics, the expressiveness of stochastic textures can be split into representations that approximate a Gaussian texture and textures including global structures~\cite{galerne_2017_tno,lagae_2010_sap}.
 
 In summary, example-based stochastic texturing techniques with no further artist input are presented by the following techniques. \citeauthor*{lagae_2010_pis}~\cite{lagae_2010_pis} match noise bandwidths for isotropic multi-resolution noise with the performance described as ``rapid'', given by \citeauthor*{gilet_2012_mkn}~\cite{gilet_2012_mkn} as a few milliseconds. \citeauthor*{galerne_2017_tno}~\cite{galerne_2017_tno} introduced an efficient sparse convolution noise based on textons. The example match takes a couple of seconds.
 
@@ -63,16 +58,11 @@ While focusing on stochastic pattern, the semi-procedural approach of \citeautho
 
 In 3D but similar in spirit to what this survey investigates, \citeauthor*{zehnder_2016_dso}~\cite{zehnder_2016_dso} provide artists with a tool to directly assemble structurally sound curve networks on a three-dimensional surface. The components of the network are spline curves defined by the artist. Components can be placed manually or are repeated semi-automatically. The curves can be moved on the surface while having an elastic quality to them, which seems to be a quite enganging task. To prevent structural weaknesses, the system indicates problematic areas and suggests improvements, seamlessly combining the design task with engineering requirements. For filigrees, which are thinly structured repetitive patterns, \citeauthor*{chen_2016_sof}~\cite{chen_2016_sof} present a mainly data-driven approach. Their method automatically distributes and assembles a set of suitable independent input elements for which an up vector is specified into a pattern in both 2D and 3D. The authors implement an optimization of a packing problem under specific constraints, mechanically creating strengthened fillings. This method does not rely on an underlying procedural model, but it also processes control parameters for the filigree generation. Due to the nature of the optimizations, a randomization and a distortion ratio parameter are required input. Additionally a field of directional strokes can be drawn on the canvas, controlling element orientation and size. When multiple elements are combined into one common pattern, percentages for appearances of the elements can be given. The performance in two-dimensional space runs from 6 to 26 seconds.
 
-% \citeauthor*{derouet_2019_gsw}~\cite{derouet_2019_gsw} -> It is just a model?!
- 
 
 \subsubsection{Rule-based and Design-Specific Pattern}
 \label{subsubsec:analysis_rulebased_and_designspecific}
 
 In the following we summarize designs that are based on a specific set of rules or grammars. Hence, there are no limits to their expressiveness other than their underlying creation logic. Also, the following section discusses techniques that focus on the filling of global \textit{shapes and masks}.
-
-% One group of methods transform growth constraints to a probabilistic inference problem.
-% Due to the decorative quality of the results and their parameterized control, a data-driven approach is also included
 
 
 % Rule-based
@@ -99,7 +89,7 @@ Other systems provide global outlining shape control on procedural processes by 
 % These systems produce patterns that are more homogeneous than the decorative ornaments that we aim for.
 \paragraph*{Example-Based}
 \label{para:analysis_rulebased_example}
-% Grammars are a classical procedural representation. Grammar-based output can be designed through the generating grammar, the included visual elements and often custom-made parameters for visual features. To translate a desired visual output to an abstract grammar is a daunting task for most artists, and first efforts have been made to provide an example-based technique for the grammar generation itself.
+
 \citeauthor*{stava_2010_ipm}~\cite{stava_2010_ipm} present a context-free L-System that is able to recreate a given two-dimensional vector image consisting of groups of line segments. The algorithm creates similarity groups of these basic elements, computes spatial relationship clusters and iteratively translates these into rules. An artist is required to define a similarity threshold and significance weights for the different clusters, such as element distance or similarity, for example, thus guiding their representation according to the L-system rules. The time needed for the inverse step, depending on the number of elements in the input, is reported to range from a few seconds up to 20 minutes. \citeauthor*{talton_2012_ldp}~\cite{talton_2012_ldp} further generalize the idea of inverse grammar generation and interpret it as a probabilistic interference problem. Their system induces a probabilistic formal grammar from a hierarchy of labeled components with a Bayesian model merging technique.
 
 
@@ -120,9 +110,6 @@ The technique of \citeauthor*{ma_2011_det}~\cite{ma_2011_det} is based on a samp
 
 \citeauthor*{almeraj_2013_pgt}~\cite{almeraj_2013_pgt} based their example-based geometric textures genration technique  on how such textures were manually created in a previous user study~\cite{almeraj_2011_tgt}. The authors identify tiling, structure and randomness as the prominently used creation strategies. The patch-based algorithm, which focuses on eliminating the appearance of regularity, doesn't seem to allow for any user interaction. The authors do not report on the performance. Up until now there have been several advancements made in regard to example-based element and point distributions. However, we do not include the ones with no or unclear user input beyond non-creative system configuration parameter here such as~\cite{peihan_2019_pps, chen_2019_mpc}.
 
-% % This is not a good paper: 
-% % In related fashion, \citeauthor*{chen_2019_mpc}~\cite{chen_2019_mpc} destribute ellipses along a boundary of a shape and optimize for structurally sound pattern collages along a boundary.
-
 
 \citeauthor*{landes_2013_asm}~\cite{landes_2013_asm} present an element distribution technique in 2D as well as 3D that improves on collision-free and anisotropic distributions by extending point based element placement to a shape-driven processes with spatial relationship measurements. Next to the exemplar, there are several user inputs possible, such as a gradient image for the distribution intensity and parameter for the fitting algorithm. Even though these can control a visual range, their communication is quite abstract. Performances range from seconds to several minutes depending on the complexity of the arrangement. 
 % While most related techniques in 3D focus on world building with different design requirements than pattern generation, the 3D element distribution technique from 
@@ -136,15 +123,12 @@ The technique of \citeauthor*{ma_2011_det}~\cite{ma_2011_det} is based on a samp
 
 \paragraph*{Brushing}
 \label{para:analysis_element_arrangements_sketching}
-\citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef}
-% is worthwhile to point our for their 
-present an interactive brushing systems for placing aggregations of elements directly, focusing on even distribution and resolving collisions. An artist can do add, erase and replace operations with the brush and also sketch a density map. The brushing is combined with an autocomplete functionality with element fields to control the automatically filled elements' alignment based on brushed directions. Fillings are computed through optimizing iteratively scale, orientation and position of the elements. Elements can be rigid or be deformed through the packing. The technique is applicable for 2D planes, 3D surfaces as well as 3D volumes. Performances go up to 2 minutes and the authors point to future work for improving on this. Overall, this work is a convincing combination of manual creation with automatization for creating creative element arrangements. \citeauthor*{davison_2019_ief}~\cite{davison_2019_ief} add to the work with a brushing technique that employs several example arrangements as palettes, which can be freely combined. 
+\citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} present an interactive brushing systems for placing aggregations of elements directly, focusing on even distribution and resolving collisions. An artist can do add, erase and replace operations with the brush and also sketch a density map. The brushing is combined with an autocomplete functionality with element fields to control the automatically filled elements' alignment based on brushed directions. Fillings are computed through optimizing iteratively scale, orientation and position of the elements. Elements can be rigid or be deformed through the packing. The technique is applicable for 2D planes, 3D surfaces as well as 3D volumes. Performances go up to 2 minutes and the authors point to future work for improving on this. Overall, this work is a convincing combination of manual creation with automatization for creating creative element arrangements. \citeauthor*{davison_2019_ief}~\cite{davison_2019_ief} add to the work with a brushing technique that employs several example arrangements as palettes, which can be freely combined. 
 
 
 \paragraph*{Data-Driven}
 \label{para:analysis_element_arrangements_datadriven}
 
-% TODO: NOT in table - Add to it?
 \citeauthor*{phan_2016_ple}~\cite{phan_2016_ple} offer a data-driven recommendation system for circular ornamentation, employing a machine learned style and composition feature vector. Based on a custom ring-based layout system that represents, for example, plates, vases and a first decorative element chosen by the artist, the system completes a design. The artist can also chose to incrementally add elements manually, while the system accompanies this by suggesting suitable elements and placements. This work indicates the promising direction of using learned characteristics to further stimulating tools, which, for example, generate meaningful design suggestions.
 
 
@@ -170,14 +154,11 @@ In order to create an pattern along a sketch, \citeauthor*{lu_2014_dds}~\cite{lu
 % Not in table
 Similar approaches have also been investigated in the context of texture painting~\cite{lukac_2013_pft}, hand-drawn animations~\cite{xing_2015_aha}, creating mosaics~\cite{igarashi_2010_dde,abdrashitov_2014_msi} and data visualization~\cite{xia_2018_ddc}. These ideas cohere to the needed control principles for creative creation while focusing on their specific design tasks. 
 
-% Add \cite{alvarez_2019_ido} -> abstract textures?! Results are not convincing. Currently it is listed under models, artistic approaches...
-
 
 \subsection{Curves and Brushing}
 \label{subsec:analysis_curves}
 
 Curves and brushing are not only used indirectly as control tool, \eg~for creating a decorative frame, but also as a visual element in itself. Formed curves, such as circles, spirals or hearts, are essential components for many pattern designs such as ornamentation and are discussed first. Incorporating an artist-defined curve as the spine of a pattern, \citeauthor*{yu_2012_ans}~\cite{yu_2012_ans} use an interactive L-system to attach decorative spiral designs to the curve given by an artist. \citeauthor*{xu_2009_mcc}~\cite{xu_2009_mcc} use the space-filling algorithm of \citeauthor*{wong_1998_cgf}~\cite{wong_1998_cgf} in combination with particle tracing in simulated magnetic forces for the generation of decorative curves. The physical properties of the charges, the magnetic field and the initialization of the particles are the parameters for designing the curves. The computation takes less than 5 seconds. The authors acknowledge the non-intuitive parameterization of the system and give an example timing of 2 minutes for finding the parameters of a specific example. \citeauthor*{merrell_2010_ecs}~\cite{merrell_2010_ecs} generated a set of curves in the same style of a given parametric example curve. A style is defined by local properties, such as tangents and curvatures that are derived from a local shape analysis. The new curves are computed with a rule-based system that allows artists to interactively edit the result. Interactivity is somewhat diminished by computation times of a few minutes for a curve set.
-% Add \cite{pedersen_2006_ola} -> mazes?! It is currently listed under models
 
 For more individual designs, brushing methods create output along curves but do so directly without taking an a priori completed curve into consideration, as if using a spray can or a brush. Painting techniques usually include a brush diameter, hence the size of the area to be filled along the curve. 
 
@@ -188,8 +169,6 @@ For more individual designs, brushing methods create output along curves but do 
 
 Going far beyond simple curve structures, \citeauthor*{jacobs_2018_dbe}~\cite{jacobs_2018_dbe} developed the programming and drawing environment \textit{Dynamic Brushes}, in which an artist can create individual procedural brushes for a stylus pen. General programming logic and relevant mathematical functions for creating patterns are translated into a visual programming interface. The evaluation of the system by two professional artists shows that once initial struggles to learn the system were mastered, the artists were able capture their personal analog styles with the procedural brushes. Overall, the authors and the artists open many valuable questions about the usage of current tools and about alternative approaches that seek to seamlessly blend manual and procedural creation processes. The authors add to~\cite{jacobs_2018_dbe} in~\cite{li_2020_sva} with \textit{Demystified Dynamic Brushes} and give an artist further options, \eg~with visualizations on the canvas, to investigate the linking between the procedural modelling and the visual output and to control it. Also, the creation history is recorded and can be navigated. Overall the evaluation of the system with artists indicates that a tighter bond between visual work and programming tasks make procedural modelling to artist more accessible.
 
-% Add li_2020_sva to table?
-
 \paragraph*{Feature Exploration}
 \label{para:analysis_rulebased_exploration}
 
@@ -197,13 +176,9 @@ Even though not a generating technique in itself, exploration is an important ch
 
 In the context of 3D modelling, \citeauthor*{talton_2009_emw}~\cite{talton_2009_emw} investigate a collaborative 3D modeling system by crowd sourcing possible models and feeding the results back to the system for others to explore in a structured manner. 
 
-
-
-
 \subsection{Connections, Branches and Directionality}
 \label{subsec:analysis_connections_branches_and_directionality}
 
-%\insertref[inline]{Street-Modeling: \cite{chu_2019_ntg}, Plants: \cite{haedrich_2017_ima}, Terrain: guerin_2017_ieb}
 
 While the above discussed work, such as~\cite{yu_2012_ans,xu_2009_mcc, merrell_2010_ecs}  enables specific branching designs, we are now turing to connections, branches and directionality in a more general applicable manner.
 
@@ -226,6 +201,3 @@ Even though this functionality can be compared to using the tip of a brush, pain
 By detecting symmetries and curvilinear element arrangements in a given vector pattern, \citeauthor*{yeh_2009_dsa}~\cite{yeh_2009_dsa} extend the manual data-driven design processes with procedural-modeling-like editing options. Based on the detected element groups, an artist can adjust the spacing, location and scale of one element directly and propagate that change to the all other elements in the group. The authors also offer a brush that recreates recognized element groups.
 
 The technique of \citeauthor*{guerrero_2016_pep}~\cite{guerrero_2016_pep} offers suitable design variations of the vector pattern an artist is working on. An artist can select and continue with one of the offered alternatives. The system constantly re-selects from an exponential number of relevant variations based on the artist's modifications. The user interface is carefully laid out in order to offer design variations in an intuitive and efficient manner while at the same time not hindering an artist's own workflow. The authors thoroughly evaluate their system quantitatively and qualitatively - for example, with a user study. Overall, participants agreed on the usefulness of technique.
-
-
-% Also, there are procedural techniques that enable low-level control on the results themselves. But only in specific contexts such as architecture~\cite{lipp_2008_ive} and landscapes \citeauthor*{emilien_2015_wie}~\cite{emilien_2015_wie}, which do not translate to the context of ornamentation. 

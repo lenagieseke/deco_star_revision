@@ -23,7 +23,6 @@ In addition to the disadvantage in the control of a procedural representation, t
 The classifications of core mechanisms for procedural generation of \citeauthor*{hendrikx_2013_pcg}~\cite{hendrikx_2013_pcg} in the context of games and the categorization of \citeauthor*{smelik_2014_aso}~\cite{smelik_2014_aso} for virtual worlds are equally appropriate in the context of creative pattern generation. In the following we briefly discuss core mechanisms in the context of creative pattern generation, based on the previously mentioned taxonomies (\cite{hendrikx_2013_pcg}, \cite{smelik_2014_aso}).
 
 \paragraph*{Stochastic Models} generate models by using random values. They can either be used in their original form as procedural model or as a noise basis function. Visual features can be added by combining multiple layers of the noise in different resolutions. Typical noise functions are lattice value noise, lattice gradient noise (\eg~Perlin noise \cite{perlin_1985_ais}), sparse convolution noise and spectral noise~\cite{ebert_2003_tmp,lagae_2010_sap}. 
-% These ``pure'' procedural programs also have the advantage of being well suited for optimization, such as parallelization, because they can be randomly evaluated in constant time~\cite{lagae_2010_sap}. 
 In the context of creative pattern generation, stochastic models build a basis for many designs but their design spectrum and controllability are limited.
 
 \paragraph*{Function-based Models} extend the class of stochastic models by layering and combining a variety of functions to form a visually complex pattern. Typical building blocks are periodic, spline, step, clamp and conditional functions~\cite{ebert_2003_tmp} and are the basis for regular patterns designs. 
@@ -31,17 +30,11 @@ In the context of creative pattern generation, stochastic models build a basis f
 \paragraph*{Rule-based Models} are part of individual, and often quite complex, generation systems that can be context-dependent and/or design-specific. Rule-based models are programs that relate to and partition the space to fill and follow propagation rules. The algorithmic core often handles proxy shapes, while for the result graphical elements, such as vector graphics, are mapped to the proxies. Rule-based procedural models are suitable for creative pattern generation and novel control mechanisms because their iterative generation logic is open and flexible~\cite{wong_1998_cgf, mech_2012_tdf}. They can implement any designs and include any elements. Moreover, within a suitable pipeline, they can potentially take global constraints into consideration and build structural hierarchies.
 
 \paragraph*{Grammar-based Models}
-% Grammar-based models are also considered ``purely'' procedural~\cite{smelik_2014_aso}. 
 form grammatically-correct sentences from individual words, based on a system of rules, and they are related to rule-based models in that the rules are using grammars or rewriting systems. 
-% Originally introduced in theoretical linguistics by Noam Chomsky in the late 1950s, grammars are applied in computer graphics to generate objects such as plants from elements encoded as letters or words~\cite{hendrikx_2013_pcg}. 
 Prominent techniques are L-systems and shape grammars. An emerging subgroup of grammar-based models includes \textit{probabilistic} inference into the derivation of correct sentences from a grammar. In recent years, there have been a variety of successful grammar-based approaches for certain aspects of creative pattern generation~\cite{benes_2011_gpm,talton_2011_mpm,ritchie_2015_cpm}. However, grammars are difficult to set up and to design~\cite{stava_2010_ipm}. Because the execution process is inherently hierarchical, grammar systems have difficulty in supporting creative control from a global to local scale.
 
-% \textit{Simulation Models:} Simulation models are based on techniques that approximate complex phenomena for which an analytical solution is unmanageable or unavailable. \citeauthor*{hendrikx_2013_pcg}~\cite{hendrikx_2013_pcg} further group simulation techniques into cellular automata, vector and tensor fields, and agent-based simulations. 
-
-% In the context of creative pattern generation, simulation models are not prominent, with the exception of vector and tensor fields~\cite{ijiri_2008_aeb,yuanyuan_2011_gso,saputra_2017_ffo}. For simulation models usually interactive performance is a challenge, as well as the control on an element level. However, the potential to create a layout within a space and adapt to the characteristics of that space within a simulation system as well as the possible design variability call for further investigation.
 
 \paragraph*{Artificial Intelligence Models} represent approaches that go beyond the direct execution of specific rules. For example, they automatically optimize results based on fitness or error functions, or they apply planning steps. \citeauthor*{hendrikx_2013_pcg}~\cite{hendrikx_2013_pcg} group this class into genetic algorithms, neural networks and constraint satisfaction and planning. In recent years, machine learning has been introduced into procedural content generation with the same impact as in all other computer science fields~\cite{summerville_2017_pcg}. The potential of machine learning techniques in regard to creative pattern generation and their control mechanisms seems almost limitless.
-% and is further discussed as outlook in \Cref{subsec:analysis_outlook_mixed_initiative_interfaces}.
 
 
 
@@ -57,23 +50,16 @@ Addressing the issue of resolution example-based synthesis is a well-established
 
 Data-driven models are numerous and diverse because they can use and produce any input and output data without an underlying procedural model. In the following survey of the state of the art for creative pattern generation, we include various data-driven techniques, however an overall classification is not the focus of this work. Relevant techniques include the tiling and distribution of elements and drawing and brush mechanisms.
 
-% For a review of models that output ornamental patterns, we focus on the output of the models and not on their underlying generation principles in order to come to a summarization.
-
 
 \subsection{Specific Pattern Designs}
 \label{subsec:specific_pattern_designs}
 
 In this section we review models that output specific pattern designs, exemplary for creative pattern generation. The references in this section summarize work that solely focus on the output and hardly offer any control mechanisms or support a creative creation process. Work that produces similar aesthetics but also offer control mechanisms (\eg~\cite{wong_1998_cgf,yu_2012_ans,zehnder_2016_dso}), are reviewed in~\Cref{sec:analysis}.
 
-%  Celtic designs were, for example, successfully computed by~\citeauthor*{kaplan_2003_cgc}~\cite{kaplan_2003_cgc} and~\citeauthor*{doyle_2013_ccc}~\cite{doyle_2013_ccc}.
 
 Work on the generation of pattern designs is spread over various research communities~\cite{whitehead_2010_tpd}. For the development of models \citeauthor*{whitehead_2010_tpd}~\cite{whitehead_2010_tpd} differentiates between two motivations in the context of generating models for ornamentation in games. First, the author identifies the goal to reproduce existing patterns such as Islamic and Celtic designs. Such work is mainly found in the communities of mathematics and computer science. Second, \citeauthor*{whitehead_2010_tpd} identifies the goal of generating novel pattern designs, which is held mainly by algorithmic computer artists. Such designs are usually not executed in an academic context and, beyond the presentation of the results, are unfortunately not well documented. Only a few exceptions, such as the work of \citeauthor*{takayama_2016_med}~\cite{takayama_2016_med} in regard to 3D-printed ornate shapes or \citeauthor*{alvarez_2019_ido}~\cite{alvarez_2019_ido} for randomized abstract texture designs give some information about their underlying algorithms. However, due to the overall missing comparable documentations we do not further include computer artists' work.
 
-For what \citeauthor*{whitehead_2010_tpd}~\cite{whitehead_2010_tpd} calls mathematic/scientific ornamentation in the context of games, the author 
-% In the following, we summarize and extend the analysis of~\citeauthor*{whitehead_2010_tpd}~\cite{whitehead_2010_tpd} regarding what he calls mathematic/scientific ornamentation. \citeauthor*{whitehead_2010_tpd}~\cite{whitehead_2010_tpd}'s survey does not necessarily follow ornamental design rules, all examples constitute at least a subpart of an ornament - for example, the background fillings. These publications focus on the analysis of a pattern and the development of a generative model for a specific pattern type rather than its controllability. Hence, we do not include these in the taxonomy of control mechanisms.
-% 
-% Rigid design rules enable formal models and~\citeauthor*{whitehead_2010_tpd}~\cite{whitehead_2010_tpd} 
-describes tiling and symmetry as the most relevant constituting rules. In combination with interlacing parts of the pattern while repeating and tiling elements, these principles are able to systematically describe Islamic~\cite{ostromoukhov_1998_mtc} and Celtic~\cite{cromwell_1993_ckm} patterns, towards the traditional designs given in \Cref{fig:islamic_celtic_ornament}.
+For what \citeauthor*{whitehead_2010_tpd}~\cite{whitehead_2010_tpd} calls mathematic/scientific ornamentation in the context of games, the author describes tiling and symmetry as the most relevant constituting rules. In combination with interlacing parts of the pattern while repeating and tiling elements, these principles are able to systematically describe Islamic~\cite{ostromoukhov_1998_mtc} and Celtic~\cite{cromwell_1993_ckm} patterns, towards the traditional designs given in \Cref{fig:islamic_celtic_ornament}.
 
 %LG: Take this figure out?
 \begin{figure}

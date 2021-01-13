@@ -3,7 +3,6 @@
 
 \section{Creative Means}\label{sec:creativ_means}
 
-% ZOOM INTO TOPIC
 Many content generation contexts in Computer Graphics involve creative considerations. To consider creativity is especially relevant for investigating control mechanisms because the controls provide the means for creative creation. However, creativity is also a notoriously difficult topic to address, because it is ill-defined and involves insights from various disciplines.
 
 On the one hand, there are efforts to develop algorithms that perform creatively for creativity-related research in computer science. On the other hand, there is the common goal of supporting human creativity with digital tools, which is the focus of this survey. The goal of enabling human creativity is, for example, well-researched in regard to interface design. This is an established field in the human-computer interaction (HCI) community and it is based largely on the pioneering work of \citeauthor*{shneiderman_2007_cst}~\cite{shneiderman_2007_cst} about \textit{Creativity Support Tools}. This topic has recently found attention again in the HCI community~\cite{frich_2018_tyo, frich_2019_mtl, remy_2020_ecs}, asking for more rigorous evaluation in regard to claimed creativity support. Among other aspects,~\citeauthor*{frich_2018_tyo}~\cite{frich_2018_tyo} ask for "clearer definitions of creativity" and report that in 113 surveyed publications, "only 26 papers directly quoting creativity metrics (\eg fluency, originality, novelty, flexibility)." This shows that the HCI community already strives for the type of survey this STAR proposes. However, for this survey, rooted in the field of computer graphics, we review potentially relevant characteristics of underlying algorithms that might help to enable artists to be creative. Interface design aspects are included but are not focus of this survey. However, the need for bridging between developing the core algorithms and the interface in order to support creative-artistic intent has been voiced by past research~\cite{deterding_2017_mci,isenberg_2016_inw, salesin_2002_nar}, and this work wishes to contribute to this effort.
@@ -15,31 +14,21 @@ A quantified user study is often not feasible, for example for this survey and f
 We derive a working basis of such creative means in regard to control mechanisms in the following review of relevant references. Our classification is meant as a step toward understanding the creative control options within the current state of the art. In terms of measurement dimensions, it can be seen as an evaluation on algorithmic level and a subset of the more general and user-study-based classification with the \textit{Creativity Support Index}. 
 
 \subsection{Discussion Basis}\label{subsec:creative_means}
-% Academic discussions about what constitutes creativity have a long history in the field of psychology~\cite{weisberg_2006_cui}, cognitive science~\cite{boden_2004_cmm} and philosophy~\cite{gaut_2010_pc} and is ongoing. 
-
-% TODO: Check tense - should it be in present?
-%BB - I believe present is OK. 
 
 \citeauthor*{weisberg_2006_cui}~\cite{weisberg_2006_cui} states that a creative person ``intentionally produces a novel product'' (p.70) and explicitly decouples a possible value of a product from it being the result of a creative process (p.63). 
-% We follow Weisberg's exclusion of a often diffuse value of the result of a creative process and focus on the creative intent. 
 \citeauthor*{boden_2010_cat}~\cite{boden_2010_cat} described \textit{novelty} as a surprising product, one that the creator did not directly anticipated (p.30). 
-% \citeauthor*{boden_2010_cat} also differentiated between a product being surprising or novel to oneself in contrast to something being universally novel (\cite{boden_2010_cat} p.30). In this survey of creativity regarding control mechanisms, we only include novelty in reference to the expectations of a single artist.
+
 
 The integration of \textit{intention} in describing a creative process is crucial for the development of meaningful algorithms. Weisberg explains that a painter who accidentally stains a painting - a stain which is later applauded by the art world as an innovative technique - cannot be considered to have achieved a creative result. Hence, algorithms need to enable artists to follow their intentions with transparent and controllable mechanisms. 
-% The idea, for example, of an algorithm producing a large number of random design choices for an artist to choose from contradicts this principle of intention.
 
 Weisberg argues that a creator needs domain-specific knowledge and expertise in order to come up with something novel or surprising. He rejects the common perception of creativity as being an ``unfathomable leap of insight'' and advocates its systematic accessibility. 
-% He argues that the perception of creativity as unfathomable results from missing context and domain knowledge and from neglecting to include the whole process that leads to a novel product. 
-Weisberg's argument applied in the context of control mechanisms leads to requiring techniques to enable artists to fully understand the domain they work with. Cause and effect of interactions as well as the overall options to control the output must be transparent and navigable.
-% Weisberg concludes his considerations about creative processes by stating that ``you must also work to broaden and deepen your database''~\cite{markman_2009_tis}. Hence, 
-% control mechanisms not only need to be transparent and fully steerable for an artist, 
 
-However, there also must be a large design space for a creator to explore. %\citeauthor*{boden_2010_cat}~\cite{boden_2010_cat} describes this as a landscape to navigate through. 
+Weisberg's argument applied in the context of control mechanisms leads to requiring techniques to enable artists to fully understand the domain they work with. Cause and effect of interactions as well as the overall options to control the output must be transparent and navigable.
+
+However, there also must be a large design space for a creator to explore. 
 Such an increase of possible options is a core aspect of many common creativity techniques, such as brainstorming, and must also be used for the development of digital tools~\cite{terry_2004_vea}. Design spaces need to be big but also meaningful and well framed for the domain it represents. It has to provide space to delve into without the danger of getting lost. 
-% Classical brainstorming, for example, is on the one hand based on the idea of coming up with as many answers to a question as possible - with no restrictions. On the other hand, a brainstorming session starts with a carefully crafted problem statement, which is supposed to be as precise and descriptive as possible. Hence, human brainstormers intuitively remain in the domain of the problem statement and exclusively offer solutions related to the problem. 
 Therefore in a system that offers design options, all options need to make sense, while ``enabling someone to see possibilities they hadn't glimpsed before''~\cite{boden_2010_cat}. For the discovery of unseen results various stimuli can be given, for example well designed constraints can act as such stimuli. 
 
-% Common creativity techniques often include stimulating constraints~\cite{onarheim_2010_occ,shih_2011_buc,biskjaer_2014_cud,stokes_2005_ccp} or motivations to guide the exploration in a specific direction. For example, with the Six Thinking Hats technique \cite{debono_1985_sth}, each hat represents a specific mindset, such as "critical" or "emotional", with which a participant should operate. This technique enables a large variety of possible stimuli and cues such as associations, analogies, abstractions, visualizations and reversals, including purely random inputs. Stimuli are a field of active research and as mentioned above, the usefulness of random cues is doubted. \citeauthor*{markman_2009_tis} summarize their insights (\cite{markman_2009_tis}, pp.48-69) about cognitive support for creative processes, saying that the pool of random stimuli needs to be restricted to increase the opportunity for novelty and to decrease the probability of misleading failures (p.68).
 
 In a process to enable creativity, the target audience is also an influencing factor. Each skill level requires its own unique type of support~\cite{cherry_2014_qcs}. 
 %\citeauthor*{cherry_2014_qcs}~\cite{cherry_2014_qcs} discuss the handling of different user competencies as example for the importance of balancing simplicity and expressiveness. The authors mention that more expressive but also more complex tools score higher on the CSI. 
@@ -100,11 +89,6 @@ The means of stimulation indicate how well an artist can enter a pleasurable and
     \item \textit{Stimuli:} The support to find surprising results - for example, with design suggestions or variations of the input. Options to support stimulation are still underrepresented but on the rise with machine learning techniques. A clear definition of this category is not feasible at this point.
 
 \end{itemize}
-
-% For stimulation being more broadly accepted as relevant research question and required element for tools that enable creative creation, first more research has to go into understanding what constitutes effective stimulation before it can be implemented. A psychologically well-grounded theoretical assessment of stimuli is out of scope of this thesis. For the following discussion stimuli are included if a technique is explicitly evaluated in regard to its stimuli, for example with a survey. However, this category can not be included overall and in a unified manner and its generalizable assessments is left to future work.
-
-% \subsection{Summary}
-% \label{subsec:creativity_summary}
 
 In summary, for handling the ill-defined topic of creativity, we follow the definition of creativity as intentionally producing a novel and surprising product. We derive means for creative control from recent research results and relate them to control mechanisms. By this we hope to further a more objective judging of the ability of a technique to support creativity and a detailed comparison of methods and give an first example for that in the following review of the state of the art.
 
