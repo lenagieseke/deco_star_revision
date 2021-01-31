@@ -1,6 +1,6 @@
 %!TEX root = ../deco_star.tex
 \section{Introduction}
-Pattern generation in computer graphics provides vast amounts of precise and quickly generated digital content. However, despite over three decades of research, supporting artists with meaningful digital tools for creative content generation is an ongoing research challenge. Most solutions focus on adding singular features and control mechanisms, such as an example-based control or a brush, on an algorithmic level. Little attention, however, is paid to an overall creative workflow, which needs to strike a balance, giving users as much power as needed without burdening them with unwanted details. Often, techniques are claimed to be artist-controllable but are less often proven to be so.
+Pattern generation in computer graphics provides vast amounts of precise and quickly generated digital content. However, despite over three decades of research, supporting artists with meaningful digital tools for creative content generation, \rev{Referencing a visual example:}{as for example needed for ornamental pattern designs (\Cref{fig:historic_examples})} is an ongoing research challenge. Most solutions focus on adding singular features and control mechanisms, such as an example-based control or a brush, on an algorithmic level. Little attention, however, is paid to an overall creative workflow, which needs to strike a balance, giving users as much power as needed without burdening them with unwanted details. Often, techniques are claimed to be artist-controllable but are less often proven to be so.
 
 This may be a consequence of research often being executed without direct and continuous collaboration with artists and without the support of large-scale user studies. Algorithms and methods are being developed mostly to add to state of the art, such as building on recent progress in deep learning research, and there is little common understanding in the research community regarding what artist needs are and how mechanisms are validated.
 
@@ -12,3 +12,10 @@ We review recent advances in 2D pattern generation and discuss procedural models
 
 We organize contemporary techniques by design areas and the visual features they enable. We further group related work by commonly used control types. Then, we specifically analyze for each reference the offered control for an artist. 
 We conclude the review with a discussion of the creative means for the different control mechanism types. With this survey, we hope not only to categorize and summarize state of the art meaningfully but also to contribute to a shared vocabulary and a foundation for making it more accessible in the future to incorporate artists and creative tasks into algorithmic content creation pipelines.
+
+\begin{figure}
+    % \centering
+        %TODO: Replace with png for submission
+        \revimage{\includegraphics[width=1.0\columnwidth]{figures/historic_examples/examples.jpg}}
+        \caption[Historic pattern examples]{\label{fig:historic_examples} Historic examples for creative pattern designs and ornamentation. Places of origin from left to right, top to middle row:  France, China, USA, UK, Poland, Egypt, UK (cutout of a tiled pattern). Bottom row: recent commercial examples. This figure is adapted from~\cite{gieseke_2017_ooo}, image sources: [1-10].}
+\end{figure}

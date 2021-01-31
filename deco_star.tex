@@ -87,6 +87,29 @@
 
 \usepackage{yFlatTable}
 
+
+%% REVISION MACROS
+
+\definecolor{greenrev}{rgb}{0.0, 0.5, 0.0}
+\definecolor{greenrevremove}{rgb}{0.0, 0.3, 0.0}
+
+% LG: I don't know how to remove the textsuperscript when
+% disabling the comments, hence, not using it 
+% (would be nice to have the textsuperscript though)
+\newcommand{\rev}[2]{{\color{greenrev}\textsuperscript{#1}#2}}
+\newcommand{\revimage}[1]{\fcolorbox{greenrev}{greenrev}{#1}}
+% \newcommand{\revremove}[1]{{\color{greenrevremove}[\st{#1}]}}
+\newcommand{\revremove}[2]{{\color{greenrevremove}\textsuperscript{#1}\st{#2}}}
+
+\usepackage{ifthen}
+\newcommand{\showcomments}{1}  % <------------------- COMMENT THIS LINE TO REMOVE REVISION COLORING
+\ifthenelse{\isundefined{\showcomments}}
+{
+\renewcommand{\rev}[2]{{#2}}
+\renewcommand{\revremove}[2]{}
+\renewcommand{\revimage}[1]{{#1}}
+}{}
+
 %BBs
 % \input{doc/latex/sections/macros}
 \subimport{sections/}{macros}
