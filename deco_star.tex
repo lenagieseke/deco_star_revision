@@ -102,7 +102,7 @@
 \newcommand{\revremove}[2]{{\color{greenrevremove}\textsuperscript{#1}\st{#2}}}
 
 \usepackage{ifthen}
-\newcommand{\showcomments}{1}  % comment this line out to remove text coloring
+\newcommand{\showcomments}{1}  % <------------------- COMMENT THIS LINE TO REMOVE REVISION COLORING
 \ifthenelse{\isundefined{\showcomments}}
 {
 \renewcommand{\rev}[2]{{#2}}

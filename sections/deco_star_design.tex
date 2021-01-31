@@ -4,55 +4,78 @@
 \section{Design Features}\label{sec:design}
 In regard to design features, on the one hand, creative pattern generation includes repetitive and ordered structures that are often considered as \textit{textures}, thus demanding automatic and procedural creation. On the other hand, creative pattern generation might also include a global layout, adapting to the space they are filling. Furthermore, this type of patterns might include visual hierarchies and highlights that are singularly placed with creative intent. 
 
-Specifically, we categorize the analysis of the state of the art in \Cref{sec:analysis} with the design features \rev{Condensed layout:}{of \textit{Distribution and Repetition}, \textit{Frames and Hierarchies}, \textit{Curves, Lines and Brushing}, \textit{Connections, Branches and Directionality}, and \textit{Single Accents} for creative pattern generation. Hence, we sort the related work by the visual features they enable. Within those design areas we are then discussing the control mechanisms.
+Specifically, we categorize the analysis of the state of the art in \Cref{sec:analysis} with the design features \rev{Condensed layout:}{of \textit{Distribution and Repetition}, \textit{Frames and Hierarchies}, \textit{Curves, Lines and Brushing}, \textit{Connections, Branches and Directionality}, and \textit{Single Accents} for creative pattern generation. In the following we briefly explain each design feature and give a visual example for it from the related work.}
 
-In the following we briefly explain each design feature and give a visual example for it from the related work.}
-
+% TODO: replace all images with high-res version for submission
 
 \rev{}{
-\noindent\textbf{Distribution and Repetition}
+    \noindent\textbf{Distribution and Repetition}
 
-Repetition and an overall distribution of elements usually result in homogeneous pattern with a texture-like quality. A careful composition of the repeating elements can be used to create a perception of balance and order. Compositions are not limited to the repetition of the same element, but different visual qualities such as size or saturation can create various relationships.
-\begin{figure}[H]
-    \centering
-        % TODO: replace with high-res version for submission
-        \revimage{\includegraphics[width=\linewidth]{figures/design_features/santoni_2016_ggp.png}}
-    \caption{Example, adapted fro ~\cite{santoni_2016_ggp} (Figure 10), showcasing distribution and repetition as creation feature, leading to balanced as well as more irregular repetitive 
-    pattern designs. \color{red}{Status rights: not started.}}
-\end{figure}
+    Repetition and an overall distribution of elements usually result in homogeneous pattern with a texture-like quality. A careful composition of the repeating elements can be used to create a perception of balance and order. Compositions are not limited to the repetition of the same element, but different visual qualities such as size or saturation can create various relationships.
+    \begin{figure}[H]
+        \centering
+            \revimage{\includegraphics[width=\linewidth]{figures/design_features/santoni_2016_ggp.png}}
+        \caption{Designs showcasing distribution and repetition as creation feature, leading to balanced as well as more irregular repetitive pattern designs. Example results from~\cite{santoni_2016_ggp} (Figure 10), \color{red}{Status rights: not started.}}
+    \end{figure}
 }
 
 \rev{}{
-\noindent\textbf{Frames and Hierarchies}
+    \noindent\textbf{Frames and Hierarchies}
 
-Frames and hierarchical compositions further structure a design by creating contrasts (e.g., foreground vs. background) and accentuating spatial relationships (e.g., framing). These structures are often used to elaborate and accentuate the form of the space they fill, e.g. by aligning to it, building an pattern-object relationship \cite{arbruzzo_2006_dec}.
-}
+    Frames and hierarchical compositions further structure a design by creating contrasts (e.g., foreground vs. background) and accentuating spatial relationships (e.g., framing). 
 
-\begin{figure}[H]
-    \centering
-        % TODO: replace with high-res version for submission
-        \revimage{\includegraphics[width=\linewidth]{figures/design_features/frames_hierachies.png}}
-    \caption{Designs using frames and a hierarchy of elements for structuring the space and a sense of foreground and background. Left, an example results from~\cite{gieseke_2017_ooo} (Figure 7), right,~\cite{lu_2014_dds} (Figure 3). \color{red}{Status rights: not started.}}
-\end{figure}
-
-
-\rev{}{
-\noindent\textbf{Curves, Lines and Brushing}
-
-
+    \begin{figure}[H]
+        \centering
+            \revimage{\includegraphics[width=\linewidth]{figures/design_features/frames_hierachies.png}}
+            \label{fig:frames_hierachies}
+        \caption{Designs using frames and a hierarchy of elements for structuring the space and/or a sense of foreground and background. Left, example result from~\cite{gieseke_2017_ooo} (Figure 7), right,~\cite{lu_2014_dds} (Figure 19). \color{red}{Status rights: not started.}}
+    \end{figure}
 }
 
 \rev{}{
-\noindent\textbf{Connections, Branches and Directionality}
+    \noindent\textbf{Curves, Lines and Brushing}
+
+    Artist-defined curved elements and lines are an essential design feature for many creative pattern designs. They can be used, e.g., as base element or frame as well as distinct visual element. The technique of brushing usually gives a individual, hand-made quality to a pattern.
+
+    \begin{figure}[H]
+        \centering
+            \revimage{\includegraphics[width=\linewidth]{figures/design_features/jacobs_2018_dbe.png}}
+        \caption{Designs using brushed curves as constituent design feature. Example result from~\cite{jacobs_2018_dbe} (Figure 1). \color{red}{Status rights: not started.}}
+    \end{figure}
+}
 
 
+\rev{}{
+    \noindent\textbf{Connections, Branches and Directionality}
+    Connections and branches between base elements are often used to create frames and hierachies, as~\Cref{fig:frames_hierachies} shows. These structures and directionality are also often used to elaborate and accentuate the form of the space they fill, e.g. by aligning to it, building an pattern-object relationship \cite{arbruzzo_2006_dec}. 
+
+    \begin{figure}[H]
+        \centering
+            \revimage{\includegraphics[width=\linewidth]{figures/design_features/branching_directionality.png}}
+        \caption{Designs using branching and directionality, aligning elements to the shape they fill. Left, example result from~\cite{guo_2020_ipm} (Figure 1), right,~\cite{saputra_2017_ffo} (Figure 1). \color{red}{Status rights: not started.}}
+    \end{figure}
 }
 
 \rev{}{
-\noindent\textbf{Single Accents}
-Contrasts and accents are crucial for the visual appeal of an ornament cite(wong 1998, ward 1896, moughtin 1999). Single, visually dominant elements and structures might not follow the underlying order of the ornament at all, breaking an otherwise too homogeneous appearance - again distinguishing ornamentation from wallpaper.
+    \noindent\textbf{Single Accents}
 
+    Single, visually dominant elements and structures might not follow the underlying order of a pattern, breaking an otherwise homogeneous appearance. This design feature is based on the principle of contrasts and accents, which are crucial for overall visual appeal of a creative pattern design~\cite{wong_1998_cgf,ward_1896_tpo, moughtin_1999_udo}.
+
+    \begin{figure}[H]
+        \centering
+            \revimage{\includegraphics[width=\linewidth]{figures/design_features/accents.png}}
+        \caption{Designs including visual accents. Left, example result from~\cite{gieseke_2017_ooo} (Figure 7), right,~\cite{yeh_2009_dsa} (Figure 12). \color{red}{Status rights: not started.}}
+    \end{figure}
 }
+
+\rev{}{
+    For the analysis of the state of the art we sort all work according to the above discussed design areas and with that by the visual features they enable. Within those design areas we are then discussing the control mechanisms.
+}
+
+
+
+% REMOVED:
+
 
 
 \revremove{}{
