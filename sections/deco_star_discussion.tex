@@ -25,7 +25,15 @@ As the state of the art shows, one of the most prominently investigated techniqu
 
 The investigation of example-based techniques shows valuable achievements for goal-oriented control and for increasing design spaces within specific contexts. With regard to creative control, in addition to the gain in variability being a crucial step, the presented work also improves navigability through interactive performances. However, many techniques still require considerable non-creative effort for an artist, such as working with a power spectrum or predicting how changes in the exemplar, such as element arrangements, affect the output. \citeauthor*{tu_2020_cct}~\cite{tu_2020_cct} and \citeauthor*{bian_2018_tpd}~\cite{bian_2018_tpd} combine the drawing of a tile with an automatic tiling system, a promising direction, as it offers transparent navigation. Also, through the drawing of the tiles the design space is fairly open within the scope of the specific pattern type, which is further limited by fabrication constraints in case of \citeauthor*{bian_2018_tpd}~\cite{bian_2018_tpd}. Both techniques offer support for the artist directly on the canvas such as editing options on the tiling itself~\cite{tu_2020_cct}, as well as preview and snapping functionalities making it easy for an artist to create structurally sound patterns~\cite{bian_2018_tpd}. 
 
-The potential of example-based methods for creative control lies in furthering interactive performance, reducing initialization requirements and experimenting with the spatial influence of the input, such as introduced by \citeauthor*{guehl_2020_stu}~\cite{guehl_2020_stu} with a semi-procedural generation of stochastic textures. Overall, the presented work focuses on global designs, such as the whole canvas and repeating regions. Methods for which regions could be defined, models layered or the placement of single elements integrated constitute valuable directions for example-based methods as creative control.
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/discussion/guehl_2020_stu.png}}
+    \label{fig:guehl_2020_stu}
+    \caption{\citeauthor*{guehl_2020_stu}~\cite{guehl_2020_stu} offer various control mechanisms for a semi-procedural generation of stochastic textures. TODO: describe interface. Example from the supplemental material. \color{red}{Status rights: not started.}}
+\end{figure}
+
+The potential of example-based methods for creative control lies in furthering interactive performance, reducing initialization requirements and experimenting with the spatial influence of the input, such as introduced by \citeauthor*{guehl_2020_stu}~\cite{guehl_2020_stu} with a semi-procedural generation of stochastic textures (\Cref{fig:guehl_2020_stu}). Overall, the presented work focuses on global designs, such as the whole canvas and repeating regions. Methods for which regions could be defined, models layered or the placement of single elements integrated constitute valuable directions for example-based methods as creative control.
+
 
 
 \subsection{Shapes and Masks}
@@ -35,6 +43,13 @@ Sophisticated masks and growth constraints lead to visually interesting and comp
 
 In terms of control mechanisms for a more complex design goal, shape fillings and masks do not permit hierarchical or element-level local controls or the control of element connections needed by artists who want to generate patterns creatively without having to write code.
 
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/discussion/zehnder_2016_dso.png}}
+    \label{fig:zehnder_2016_dso}
+    \caption{\citeauthor*{zehnder_2016_dso}~\cite{zehnder_2016_dso} TODO: add description. Example from the supplemental material. \color{red}{Status rights: not started.}}
+\end{figure}
+
 
 \subsection{Vector Fields}
 \label{subsubsec:analysis_creative_means_fields}
@@ -42,6 +57,14 @@ In terms of control mechanisms for a more complex design goal, shape fillings an
 Fields (in the context of this survey usually vector fields) constitute a powerful tool for combining an automatic procedural filling by individually designing regions on the canvas. As \citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef}, ~\citeauthor*{saputra_2017_ffo}~\cite{saputra_2017_ffo} and \citeauthor*{gieseke_2017_ooo}~\cite{gieseke_2017_ooo} show, the streamlines of a field can create curves as part of the pattern that fill and structure a space. The design of a vector field requires usually less manual work to fill a space in its entirety by inputing only a few curves that control, \eg~directionality, than the manual creation, \eg~drawing of all curves needed for the filling. Other global design choices, such as an overall growth direction or the alignment of elements, are simple to translate from a vector field to procedural generation rules.
 
 The discussed work shows that fields allow for greater visual variation by opening the design space and transparent control for filling a space automatically. When designing a vector field, artists do not work with the pattern directly, but fields are intuitive to understand. Their abstraction translates to the model in a straightforward manner. Thus, using flow within a vector field to design is a suitable control mechanism, especially for designs that aims to align their elements to the space.
+
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/discussion/hsu_2020_aef.png}}
+    \label{fig:hsu_2020_aef}
+    \caption{\citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} (Figure 10 and 17) TODO: add description. \color{red}{Status rights: not started.}}
+\end{figure}
+
 
 \subsection{Curves and Brushing}
 \label{subsubsec:analysis_creative_means_curves}
@@ -52,8 +75,21 @@ Curves and sketch-like methods offer a well communicated, hence transparent navi
 
 However, because creation techniques and design spaces are open, it could lead to manual and tedious creation requirements for patterns. To balance this \citeauthor*{kazi_2012_vit}~\cite{kazi_2012_vit} and \citeauthor*{xing_2014_apr}~\cite{xing_2014_apr} incorporate procedural creation principles for automatic fillings into a data-driven process. \citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} offer through a brushing system transparent navigation and an open design space within the topic of element arrangements. With a brush an artist is free to draw almost anything - depending only on one's personal drawing capabilities. For creative pattern generation elements are often carefully connected, creating a hierarchy of structures, such as for ornaments. Hence, element arrangements can only provide a subset - albeit an important one - of the design space needed for creative pattern generation. 
 
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/discussion/xing_2014_apr.png}}
+    \label{fig:xing_2014_apr}
+    \caption{\citeauthor*{xing_2014_apr}~\cite{xing_2014_apr} (Figure 1) TODO: add description. \color{red}{Status rights: not started.}}
+\end{figure}
+
 \subsection{Element Placement}
 \label{subsubsec:analysis_creative_means_elements}
 
 The placement of single elements onto the canvas maximizes artist control and is on its own a trivial data-driven control principle. However, in combination with procedural modeling, this mechanism becomes interesting. Separately placed elements that do not follow any rules should be integrated and processed to remain part of the underlying global scene structure, as demonstrated by \citeauthor*{gieseke_2017_ooo}~\cite{gieseke_2017_ooo}. Even though single element placements can be compared to using the tip of a brush, paint-like procedural modeling techniques often have a more spray-can-like quality, such as \citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} and \citeauthor*{mech_2012_tdf}~\cite{mech_2012_tdf}. Element placement control mechanisms are closely related to the data-driven sketch-based techniques, and it shows a further promising approach for integrating procedural modeling functionalities into a data-driven process. \citeauthor*{guerrero_2016_pep}~\cite{guerrero_2016_pep} present a overall transparently navigable and stimulating control mechanism. With a carefully designed workflow, it further fosters an artist stimulation by offering novel but suitable design variations.
 
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/discussion/guerrero_2016_pep.png}}
+    \label{fig:guerrero_2016_pep}
+    \caption{\citeauthor*{guerrero_2016_pep}~\cite{guerrero_2016_pep} (Figure 8) TODO: add description. \color{red}{Status rights: not started.}}
+\end{figure}
