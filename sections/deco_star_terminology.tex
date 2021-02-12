@@ -12,7 +12,7 @@ The following defines our usage of terms that are relevant for an analysis of co
 
 \textbf{Creative} refers to a task that intentionally produces a novel, non-standard outcome, as further discussed in \Cref{sec:creativ_means}. 
 
-\textbf{Design space} refers loosely to all visual results a technique can create. For example, Perlin noise has a rather restricted design space of noise images, only differing, for example, in their frequency. Drawing with a pen can result in many different designs, thus resulting in a larger design space.
+\textbf{Design space} refers loosely to all visual results a technique can create. For example, Perlin noise\mf{citation required?} has a rather restricted design space of noise images, only differing, for example, in their frequency\mf{is that the only parameter? Otherwise, we could phrase this more weakly and still make the point}. Drawing with a pen can result in many different designs, thus resulting in a larger design space.
 
 \textbf{Expressiveness} refers to the size, the variability and the openness of a design space as in detail discussed in~\Cref{sec:creativ_means}. Expressiveness is commonly used in the context of creative controls - however, usually without a clear understanding of its meaning.
 
@@ -20,8 +20,15 @@ The following defines our usage of terms that are relevant for an analysis of co
 
 \textbf{Shape} refers to the external boundary or outline on the canvas or of an object without any restrictions on the form. 
 
-\textbf{Procedural} refers to the production of output by running an algorithm or a rule-based system.
+\textbf{Procedural} refers to the production of output by running an algorithm, \revremove{}{or}\rev{}{, such as} a rule-based system.
 
 \textbf{Data-driven} is the production of output based on given data.
 
-\textbf{Parameterized} system is based on an implicit equation. However, in regard to control mechanisms and for this work, it refers to a system that offers separated, individually controllable characteristics. Parameterization commonly does not imply a procedural representation but can be part of any technique, including data-driven ones.
+\rev{}{A }A \textbf{Parameterized} system is based on an implicit equation. However, in regard to control mechanisms and for this work, it refers to a system that offers separated, individually controllable characteristics. Parameterization commonly does not imply a procedural representation but can be part of any technique, including data-driven ones.
+
+\mf{I think "implicit equation" is too restrictive here ↑. I think we should drop that and instead write:}
+
+\rev{}{
+A \textbf{Parameterized} system offers separately controllable characteristics. In our use of the term, it does not necessarily imply a procedural pattern representation, but could also \eg{} apply to a data-driven one.
+}
+\mf{... okay?}
