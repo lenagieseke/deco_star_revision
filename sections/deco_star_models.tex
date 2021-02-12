@@ -12,7 +12,7 @@ For this goal, this survey focuses on procedural models as a basis, but it also 
 \subsection{Procedural}
 \label{subsec:models_procedural}
 
-\citeauthor*{ebert_2003_tmp}~\cite{ebert_2003_tmp} describe procedural techniques as algorithms and mathematical functions that synthesize a model or an effect. Solely equation-based representations are considered the ``purest'' form of procedural modeling~\cite{smelik_2014_aso}. This approach gained immediate importance in the early days of computer graphics. Analytical forms are able to reproduce many natural phenomena -such as wood, stone, water, smoke and plants- with only some lines of code in the range of kilobytes, hence being memory efficient. The main appeals of such procedural representation include its compactness in combination with being continuous, scalable and unbound to a specific resolution. While procedural generation techniques have been a constant basis for generating content for games, its characteristics of memory efficiency and unlimited resolution are more important than ever with the rise of virtual reality, for example.
+\citeauthor*{ebert_2003_tmp}~\cite{ebert_2003_tmp} describe procedural techniques as algorithms and mathematical functions that synthesize a model or an effect. Solely equation-based representations are considered the ``purest'' form of procedural modeling~\cite{smelik_2014_aso}. This approach gained immediate importance in the early days of computer graphics. Analytical forms are able to reproduce many natural phenomena -such as wood, stone, water, smoke and plants- with only some lines of code in the range of kilobytes, hence being memory efficient. The main appeals of such procedural representation include its compactness in combination with being continuous, scalable and unbound to a specific resolution. \mf{Remove the following sentence? It does not contribute much.} While procedural generation techniques have been a constant basis for generating content for games, its characteristics of memory efficiency and unlimited resolution are more important than ever with the rise of virtual reality, for example.
 
 The compactness and efficiency of a procedural model also enable parameterization, resulting in the model being responsive and flexible. Parameters usually represent certain visual characteristics and their amplification. Parameterization brings the crucial benefit that, for example, textures remain editable throughout the entire visual effect production pipeline.
 
@@ -26,6 +26,8 @@ The classifications of core mechanisms for procedural generation of \citeauthor*
 In the context of creative pattern generation, stochastic models build a basis for many designs but their design spectrum and controllability are limited.
 
 \paragraph*{Function-based Models} extend the class of stochastic models by layering and combining a variety of functions to form a visually complex pattern. Typical building blocks are periodic, spline, step, clamp and conditional functions~\cite{ebert_2003_tmp} and are the basis for regular patterns designs. 
+
+\mfcomment{Perlin's image synthesizer \cite{perlin_1985_ais} does some of that already, his hypertexture paper \cite{perlin_1989_hyp} quite explicitly so (albeit with a focus on implicit shapes in 3D)}
 
 \paragraph*{Rule-based Models} are part of individual, and often quite complex, generation systems that can be context-dependent and/or design-specific. Rule-based models are programs that relate to and partition the space to fill and follow propagation rules. The algorithmic core often handles proxy shapes, while for the result graphical elements, such as vector graphics, are mapped to the proxies. Rule-based procedural models are suitable for creative pattern generation and novel control mechanisms because their iterative generation logic is open and flexible~\cite{wong_1998_cgf, mech_2012_tdf}. They can implement any designs and include any elements. Moreover, within a suitable pipeline, they can potentially take global constraints into consideration and build structural hierarchies.
 
@@ -65,7 +67,7 @@ For what \citeauthor*{whitehead_2010_tpd}~\cite{whitehead_2010_tpd} calls mathem
 \begin{figure}
 \centering
     \includegraphics[width=0.9\columnwidth]{figures/islamic_celtic_ornament_01.png}
-    \caption[Islamic and Celtic pattern designs]{Examples of traditional Islamic (left) and Celtic pattern designs, showing the complexity of possible pattern designs. Image sources: [12, 13].}
+    \caption[Islamic and Celtic pattern designs]{Examples of traditional Islamic (left) and Celtic pattern designs, showing the complexity of possible pattern designs. Image sources: [12, 13]. \mfcomment{source links are verbatim numbers, not pointing to the bibliography.}}
 \label{fig:islamic_celtic_ornament}
 \end{figure}
 

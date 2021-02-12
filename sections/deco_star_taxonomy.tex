@@ -12,7 +12,7 @@ The following taxonomy lays groundwork for our later evaluation of control mecha
 \subsection{Control Characteristics}\label{control_charateristics}
 A creation process can be described by answering the questions of \textit{how}, \textit{what}, \textit{where}, \textit{when} and \textit{who}. These characteristics can be discussed in various creation contexts and could even be translated to traditional media such as aquarell on paper.
 
-\noindent\textbf{How (User Interaction)} is a control executed or an input given by an artist? How far is it from the visual result on the canvas? 
+\noindent\textbf{How (User Interaction)} is a control executed or an input given by an artist? How \refremove{}{far}\rev{}{detached} is it from the visual result on the canvas? 
 
 \begin{figure}[H]
     \centering
@@ -22,7 +22,8 @@ A creation process can be described by answering the questions of \textit{how}, 
 
 \begin{itemize}
     \item \textit{File}: The control is externally given, such as with code or a configuration file.
-    \item \textit{UI}: A separate UI is given through which an artist gives input and activates states. UIs are often in close proximity to the canvas, carefully designed and easily usable. However, because they detach the work from the actual output, UIs have an abstract nature. An artist must actively translate the interaction with the UI to the resulting output on the canvas.
+    \item \textit{UI}: A separate UI is given through which an artist gives input and activates states. UIs are often in close proximity to the canvas, carefully designed and easily usable. However, because they detach the work from the actual output, UIs have an abstract nature \rev{}{of indirection}. An artist must actively translate the interaction with the UI to the resulting output on the canvas.
+    \mf{I would propose to \emph{always} use “separate UI” instead of “UI”. Outside our field, both external files and on-canvas techniques constitute possible interfaces}
     \item \textit{On canvas}: Controls are executed directly on the output canvas. Most of them require an activation or selection of a tool in a separate UI, such as selecting a pen for drawing on a canvas. 
     There are cases where controls cannot clearly be classified as either UI or on canvas. A pen, for example, can have different characteristics that an artist needs to set in the UI. The adjustment of settings should be as seamlessly integrated into an on-canvas tool as possible (\eg with choices appearing as tool tips). 
 \end{itemize}
@@ -43,6 +44,18 @@ A creation process can be described by answering the questions of \textit{how}, 
 \end{itemize}
 
 \noindent\textbf{Where (Canvas)} has the input an effect spatially and what is the area of influence? 
+
+\mf{In the current revision, the where-picture floats into the when-block, which disturbs the reader. 
+If this happens in the final version, I propose to drop the figure-environment and place it here with a brutal
+includegraphics inside a centering block, see comment in code.}
+%
+% Mind the gap: needs a separate paragraph, otherwise, centering affects previous text as well.
+%
+%{\centering
+%        \includegraphics[width=\controlParamsFigWidth\linewidth]{figures/control_paradigms/where.pdf
+%
+%
+%}
 \begin{figure}[hbt]
     \centering
         \includegraphics[width=\controlParamsFigWidth\linewidth]{figures/control_paradigms/where.pdf}
@@ -70,7 +83,7 @@ Input can be given \textit{before}, \textit{during} the creation process, when p
         % \caption{Who can give the input? Which skill set is needed?}
 \end{figure}
 
-This category can be in part derived from the above characteristics of \textit{how} and \textit{what}. In most general terms, this category can be classified the skill set of a \textit{Programmer}, for giving, \eg~code as input, requiring analytical-formal and logical thinking and the ability to abstract. On the other end of the spectrum, the skill set of an \textit{Artist} is needed, \eg~for drawing, requiring intuitive-visual and spatial thinking and the ability to create. The \textit{who} category is listed here for completeness. However, to answer questions of needed competencies, skill- and mindsets, including the accompanying psychological and artistic aspects, is out of the scope of this survey.
+This category can be in part derived from the above characteristics of \textit{how} and \textit{what}. In most general terms, this category can be classified the skill set of a \textit{Programmer}, for giving, \eg~code as input, requiring analytical-formal and logical thinking and the ability to abstract. On the other end of the spectrum, the skill set of an \textit{Artist} is needed, \eg~for drawing, requiring intuitive-visual and spatial thinking and the ability to create. The \textit{who} category is listed here for completeness. \revremove{}{However, to answer questions of}\rev{}{The discussion of} needed competencies, skill\rev{}{s}\revremove{}{-}s and mindsets, including the accompanying psychological and artistic aspects, is out of the scope of this survey\rev{}{, though}.
 
 \subsection{Control Mechanisms}\label{subsec:taxo_control_mechanism}
 Next to the above overall relevant factors for an artist using digital tools, we now classify the control mechanisms as they are described in the state of the art. These low-level mechanisms define what an artist can (or has to) work with and are specified for each reference in Table~\ref{table:analysis}. Because this survey focuses on interfacing algorithms, UI specifics, such as the layout of buttons, are not considered. For each mechanism we summarize the \textit{how}, \textit{what}, \textit{where} and \textit{when} characteristics over all reviewed publications and with that show the connections and capabilities of the different control mechanisms and potential trade-offs between approaches in Table~\ref{table:taxo_controlmechanism}.
@@ -106,6 +119,7 @@ Next to the above overall relevant factors for an artist using digital tools, we
     \item \textit{Shapes}: A space to fill (\eg~a specific shape).
     \item \textit{Masking}: Areas within the shape to fill that should remain unaffected.
     \item \textit{Curves to Fill}: A one-dimensional curve or path to be filled. The curve is given as a whole before the filling starts.
+    \mf{Can you actually “fill” a (1D) curve? Should we say: “follow a curve” instead?}
 \end{itemize}
 
 \noindent\textbf{Guiding}
