@@ -22,8 +22,13 @@ Texture generation mainly focuses on creating a repetitive and homogeneous patte
 \subsubsection{Stochastic Pattern}
 \label{subsubsec:analysis_distribution_and_repetition_stochastic}
 
-For procedural texture generation, stochastic textures have been the foundation of both research investigations and many complex models. Stochastic textures are generated with noise functions, and \citeauthor*{lagae_2010_sap}~\cite{lagae_2010_sap} present the state of the art for work before the year 2010. In terms of the controllability of the textures, the authors identify three main approaches. First, the indirect access to the noise through the control of the power spectrum, as show in~\Cref*{fig:galerne_2012_gne}. Second, the direct access to its appearance through function parameters, and third, example-based techniques. The first two approaches are based on specific function characteristics and are hardly generalizable for creative pattern generation. Also, for stochastic patterns, related work usually focuses on defining a new model. Then, the control of that model often directly derives from that specific model.
+For procedural texture generation, stochastic textures have been the foundation of both research investigations and many complex models. Stochastic textures are generated with noise functions, and \citeauthor*{lagae_2010_sap}~\cite{lagae_2010_sap} present the state of the art for work before the year 2010. \rev{Adding A Visual Reference}{\Cref{fig:galerne_2012_gne} gives an example for the typical visual appearance of stochastic pattern.} In terms of the controllability of the textures, the authors identify three main approaches. First, the indirect access to the noise through the control of the power spectrum, as also show in~\Cref*{fig:galerne_2012_gne}. Second, the direct access to its appearance through function parameters, and third, example-based techniques. The first two approaches are based on specific function characteristics and are hardly generalizable for creative pattern generation. Also, for stochastic patterns, related work usually focuses on defining a new model. Then, the control of that model often directly derives from that specific model.
 
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/analysis/galerne_2012_gne.png}}
+    \caption{\label{fig:galerne_2012_gne}In blue, Gabor noise examples. To their right an interactive visualization of their power spectrum for editing the visual characteristics.~\cite{galerne_2012_gne} (Figure 6). \color{orange}{Status rights: requested}}
+\end{figure}
 
 \paragraph*{Example-Based}
 \label{para:analysis_stochastic_examplebased_control}
@@ -33,15 +38,6 @@ For procedural texture generation, stochastic textures have been the foundation 
 Most example-based stochastic texturing techniques do not offer further artist input next to the exemplar but focus, \eg on performance. \citeauthor*{lagae_2010_pis}~\cite{lagae_2010_pis}, match noise bandwidths for isotropic multi-resolution noise with the performance of a few milliseconds, given by \citeauthor*{gilet_2012_mkn}~\cite{gilet_2012_mkn}. \citeauthor*{galerne_2017_tno}~\cite{galerne_2017_tno} introduced an efficient sparse convolution noise based on textons. The example match takes a couple of seconds.
 
 \citeauthor*{galerne_2012_gne}~\cite{galerne_2012_gne} add to the example fitting, which takes about 2 minutes per texture, an interactive visual editor for adjusting their Gabor noise. In the editor, sets of Gaussians represent the power spectrum of the noise, which can be rotated, scaled, translated, and cloned. Due to the abstract visual nature of a power spectrum, its connection to the visual features of the noise is not directly intuitive for artists. Hence, the editor has a strong exploratory nature to it. However, as the editing itself is interactive and visually appealing, it is inviting to do so. 
-
-
-\begin{figure}[H]
-    \centering
-    \revimage{\includegraphics[width=\linewidth]{figures/analysis/galerne_2012_gne.png}}
-    \label{fig:galerne_2012_gne}
-    \caption{Interactive visualization of a power spectrum for editing the visual characteristics of a Gabor noise~\cite{galerne_2012_gne} (Figure 6). \color{orange}{Status rights: requested}}
-\end{figure}
-
 
 \citeauthor*{gilet_2012_mkn}~\cite{gilet_2012_mkn} focus on increasing the expressiveness of their model toward more structural texture designs. For that, they introduce a noise that can approximate arbitrary spectral energy distributions. A straightforward noise by example computation takes up to 20 seconds, depending on the number of artist-defined convolution noises. For greater control and expressiveness, a perturbation function and a multi-layer approach are presented and some configurations can be given by artist-defined image maps. Further pursuing the topic of greater expressiveness and structured noise, \citeauthor*{gilet_2014_lrn}~\cite{gilet_2014_lrn} introduced a local random phase noise. Adjustable parameters control the visual quality of the noise and the amount of structure in comparison to noise. The authors do not report performance times for the matching step. \citeauthor*{pavie_2016_pts}~\cite{pavie_2016_pts} argue for control mechanisms being more intuitive in the spatial domain instead of the commonly used editing of the power spectrum and align local random phase noise on a regular grid with a spot noise model based on a random distribution of structured kernels. The artist has interactive control of the spatial structures by modifying the spot functions and their distribution, thus increasing the range of possible designs.
 
@@ -53,7 +49,13 @@ Most example-based stochastic texturing techniques do not offer further artist i
 \subsubsection{Regular to Irregular Pattern}
 \label{subsubsec:analysis_distribution_and_repetition_regular}
 
-All the above discussed noise-based methods control a single stochastic procedural model. Even though recent advances greatly increase their expressiveness, the design space of noise-based models is too limited for creative pattern generation. Procedural models featuring regular to irregular pattern designs (for a definition of the texture spectrum see \cite{lin_2006_qeo}) are usually optimized for specific design goals or even support a variety of procedural models within this class of designs.
+All the above discussed noise-based methods control a single stochastic procedural model. Even though recent advances greatly increase their expressiveness, the design space of noise-based models is too limited for creative pattern generation. Procedural models featuring regular to irregular pattern designs (for a definition of the texture spectrum see \cite{lin_2006_qeo}) are usually optimized for specific design goals or even support a variety of procedural models within this class of designs. For visual examples for regular to irregular pattern, see~\Cref{fig:textures}.
+
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/analysis/textures.png}}
+    \caption{\label{fig:textures}Visual examples for regular to irregular pattern designs~\cite{gieseke_2014_ipr} (Figures 4-7).}
+\end{figure}
 
 \paragraph*{Example-Based}
 \label{para:analysis_regular_example}
@@ -84,17 +86,16 @@ In 3D but similar in spirit to what this survey investigates, \citeauthor*{zehnd
 \subsubsection{Rule-based and Design-Specific Pattern}
 \label{subsubsec:analysis_rulebased_and_designspecific}
 
-In the following we summarize designs that are based on a specific set of rules or grammars. Hence, there are no limits to their expressiveness other than their underlying creation logic. Also, the following section discusses techniques that focus on the filling of global \textit{shapes and masks}.
-
-% Rule-based
-\citeauthor*{wong_1998_cgf}~\cite{wong_1998_cgf} introduced a programmable procedural system that employs a greedy rule-based strategy to generate ornamental patterns. A procedural model is created with decorative elements and with a set of growth rules that handle the selection, appearance and connections of the elements. The process iterates, finding tentative places for elements by testing them against constraints in the procedural model and, where suitable, placing elements in the found spaces, optionally and connecting them to existing elements. Possible ornament designs are technically restricted only by this iterative creation logic. All adjustments to the design and layout of an ornament have to be done by writing code. The authors do not report any performance times.
+In the following we summarize designs that are based on a specific set of rules or grammars, as for example tangle patterns shown in~\Cref{fig:santoni_2016_ggp_fig17}. Hence, there are no limits to their expressiveness other than their underlying creation logic. Also, the following section discusses techniques that focus on the filling of global \textit{shapes and masks}.
 
 \begin{figure}[H]
     \centering
     \revimage{\includegraphics[width=\linewidth]{figures/analysis/santoni_2016_ggp_fig17.png}}
-    \label{fig:santoni_2016_ggp_fig17}
-    \caption{An example for a tangle pattern. The top left shows the automatically generated tangle pattern and the bottom right version is edited by an artist~\cite{santoni_2016_ggp} (Figure 17). \color{orange}{Status rights: request needs to be edited}}
+    \caption{\label{fig:santoni_2016_ggp_fig17}An example for a tangle pattern. The top left shows the automatically generated tangle pattern and the bottom right version is edited by an artist~\cite{santoni_2016_ggp} (Figure 17). \color{orange}{Status rights: request needs to be edited}}
 \end{figure}
+
+% Rule-based
+\citeauthor*{wong_1998_cgf}~\cite{wong_1998_cgf} introduced a programmable procedural system that employs a greedy rule-based strategy to generate ornamental patterns. A procedural model is created with decorative elements and with a set of growth rules that handle the selection, appearance and connections of the elements. The process iterates, finding tentative places for elements by testing them against constraints in the procedural model and, where suitable, placing elements in the found spaces, optionally and connecting them to existing elements. Possible ornament designs are technically restricted only by this iterative creation logic. All adjustments to the design and layout of an ornament have to be done by writing code. The authors do not report any performance times.
 
 \rev{Higher-level}{
 \citeauthor*{santoni_2016_ggp}~\cite{santoni_2016_ggp} present the procedural generation of tangles with a stochastic shape grammar. Tangles are repetitive black-and-white hand-drawn patterns made from dots, straight lines, simple curves and circles (\Cref*{fig:design_features}, 1.). Tangle elements can align to the shape they fill, \eg by outlining it. With that also the design feature of frames and hierarchies can be automatically generated. A tangle generation usually takes a few seconds, with a complex example taking about 3 minutes. The authors present an interactive system for the creating process, based on a parameterized artist interface, including rule re-expansion and sketch-based operator modification. With that, the presented system is a powerful combination of editing operations with procedural generation. Also, the possible navigation through the editing history is noteworthy, as this basic operation needed for creative control is usually overlooked.  A user study evaluates the system as accurate, controllable and easy to use after a reasonable training time.} 
@@ -126,8 +127,14 @@ Other systems provide the control to fill an outlining shape by interpreting the
 \subsubsection{Element Arrangements}
 \label{subsubsec:analysis_element_arrangements}
 
-Element arrangements have individual and unconnected visual entities as smallest unit. The elements themselves usually come from separate input data, such as vector graphics. In its broadest sense, the underlying distribution models for the arrangements can be seen as a procedural model. Even though there are no generative rules, characteristics of the discrete elements and their distribution can often be parametrized, and changes can be automatically processed and reproduced in the output. When filling a shape with elements or masking areas on the canvas, elements should ideally not be cut and align themselves for evenly filling the shape.
+Element arrangements, \rev{Visual Reference}{such as show in~\Cref{fig:ma_2011_det},} have individual and unconnected visual entities as smallest unit. The elements themselves usually come from separate input data, such as vector graphics. In its broadest sense, the underlying distribution models for the arrangements can be seen as a procedural model. Even though there are no generative rules, characteristics of the discrete elements and their distribution can often be parametrized, and changes can be automatically processed and reproduced in the output. When filling a shape with elements or masking areas on the canvas, elements should ideally not be cut and align themselves for evenly filling the shape.
 % Because many visually complex pattern contain areas of formal arranged elements, this is a relevant sub-goal for a creative pattern generation task.
+
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/analysis/ma_2011_det.png}}
+    \caption{\label{fig:ma_2011_det}An example for a pattern in 3D made of discrete elements~\cite{ma_2011_det} (Figure 16 / supplemental video). \citeauthor*{ma_2011_det} also offer extensive editing options such as the propagation of the edit of a single element to the overall pattern. \color{orange}{Status rights: requested}}
+\end{figure}
 
 \paragraph*{Example-Based}
 \label{para:analysis_element_arrangements_example}
