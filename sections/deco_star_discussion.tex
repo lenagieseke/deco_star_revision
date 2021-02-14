@@ -68,23 +68,36 @@ The discussed work shows that fields allow for greater visual variation by openi
 
 Curves and hand-drawn paths give an artist direct control over the final result. In addition to the visual output being further constrained, the control is put onto the actual canvas. Curves are needed for tasks such as creating a decorative frame or structuring the space. Some techniques consider the whole curve before computing the ornament and optimize the filling of the curve based on certain design goals. This can be understood as a form of global planning. 
 
-Curves and sketch-like methods offer a well communicated, hence transparent navigation. The discussed techniques are mostly interactive, artists are familiar with their functionality from the real world and they work directly on the canvas. The ease and directness of usage also constitute a foundation for possible immersive flow of work. Using painting-like methods can allow for smoother navigation by integrating brush settings and increasing the quantity of controls.
-
-However, because creation techniques and design spaces are open, it could lead to manual and tedious creation requirements for patterns. To balance this \citeauthor*{kazi_2012_vit}~\cite{kazi_2012_vit} and \citeauthor*{xing_2014_apr}~\cite{xing_2014_apr} (\Cref{fig:xing_2014_apr}) incorporate procedural creation principles for automatic fillings into a data-driven process. \citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} offer through a brushing system transparent navigation and an open design space within the topic of element arrangements. With a brush an artist is free to draw almost anything - depending only on one's personal drawing capabilities. For creative pattern generation elements are often carefully connected, creating a hierarchy of structures, such as for ornaments. Hence, element arrangements can only provide a subset - albeit an important one - of the design space needed for creative pattern generation. 
-
 \begin{figure}[H]
     \centering
     \revimage{\includegraphics[width=\linewidth]{figures/discussion/xing_2014_apr.png}}
-    \caption{\label{fig:xing_2014_apr}\citeauthor*{xing_2014_apr}~\cite{xing_2014_apr}s' technique  propagates user sketches (right, black strokes) to fill the give outline automatically (right, red strokes)(Figure 1).}
+    \caption{\label{fig:xing_2014_apr}\citeauthor*{xing_2014_apr}~\cite{xing_2014_apr}s' technique (Figure 1) propagates user sketches (right, black strokes) to fill the give outline automatically (right, red strokes).}
 \end{figure}
+
+Curves and sketch-like methods offer a well communicated, hence transparent navigation. The discussed techniques are mostly interactive, artists are familiar with their functionality from the real world and they work directly on the canvas. The ease and directness of usage also constitute a foundation for possible immersive flow of work. Using painting-like methods can allow for smoother navigation by integrating brush settings and increasing the quantity of controls. 
+
+On the downside, curves and brushing could lead to manual and tedious creation requirements for patterns and unstructured results because creation techniques and design spaces are open. To balance this \citeauthor*{kazi_2012_vit}~\cite{kazi_2012_vit} and \citeauthor*{xing_2014_apr}~\cite{xing_2014_apr} (\Cref{fig:xing_2014_apr}) incorporate procedural creation principles for automatic fillings into a data-driven process. \citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} offer through a brushing system transparent navigation and an open design space within the topic of element arrangements. \rev{}{The approach of~\citeauthor*{li_2020_sva}~\cite{li_2020_sva} links visual curve creation, code, and data in a unique manner, \eg by adding textual and numeric information about the underlying procedural algorithm to the canvas. The technique possibly increases a transparent and navigable workflow once an artist has learned the workflow. This novel approach calls for further investigation and verification.}
+
+\begin{figure}[H]
+    \centering
+    \revimage{\includegraphics[width=\linewidth]{figures/discussion/li_2020_sva.png}}
+    \caption{\label{fig:li_2020_sva}\citeauthor*{li_2020_sva}~\cite{li_2020_sva}s' technique (Figure 1) links visual output, data and code with (a) visualizations, (b) iconography, (c) inspection toggles, and (d) looping controls.\color{orange}{Status rights: requested}}
+\end{figure}
+
+
+In summary, with a brush an artist is free to draw almost anything - depending only on one's personal drawing capabilities. For creative pattern generation, however, also structure, pattern hierarchyies, and distribution techniques need to be supported. \revremove{}{Hence, element arrangements can only provide a subset - albeit an important one - of the design space needed for creative pattern generation.}
+
+
 
 \subsection{Element Placement}
 \label{subsubsec:analysis_creative_means_elements}
 
-The placement of single elements onto the canvas maximizes artist control and is on its own a trivial data-driven control principle. However, in combination with procedural modeling, this mechanism becomes interesting. Separately placed elements that do not follow any rules should be integrated and processed to remain part of the underlying global scene structure, as demonstrated by \citeauthor*{gieseke_2017_ooo}~\cite{gieseke_2017_ooo}. Even though single element placements can be compared to using the tip of a brush, paint-like procedural modeling techniques often have a more spray-can-like quality, such as \citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} and \citeauthor*{mech_2012_tdf}~\cite{mech_2012_tdf}. Element placement control mechanisms are closely related to the data-driven sketch-based techniques, and it shows a further promising approach for integrating procedural modeling functionalities into a data-driven process. \citeauthor*{guerrero_2016_pep}~\cite{guerrero_2016_pep} present a overall transparently navigable and stimulating control mechanism. With a carefully designed workflow, it further fosters an artist stimulation by offering novel but suitable design variations.
+The placement of single elements onto the canvas maximizes artist control and is on its own a trivial data-driven control principle. However, in combination with procedural modeling, this mechanism becomes interesting. Separately placed elements that do not follow any rules should be integrated and processed to remain part of the underlying global scene structure, as demonstrated by \citeauthor*{gieseke_2017_ooo}~\cite{gieseke_2017_ooo}.
+\revremove{}{Even though single element placements can be compared to using the tip of a brush, paint-like procedural modeling techniques often have a more spray-can-like quality.}
+Element placement control mechanisms are closely related to the data-driven sketch-based techniques, and represent a promising approach for integrating procedural modeling functionalities into a data-driven process. \citeauthor*{guerrero_2016_pep}~\cite{guerrero_2016_pep} present a overall transparently navigable and stimulating control mechanism (\Cref{fig:guerrero_2016_pep}). The carefully designed workflow fosters an artist stimulation by offering novel but suitable design variations.
 
 \begin{figure}[H]
     \centering
     \revimage{\includegraphics[width=\linewidth]{figures/discussion/guerrero_2016_pep.png}}
-    \caption{\label{fig:guerrero_2016_pep}\citeauthor*{guerrero_2016_pep}~\cite{guerrero_2016_pep} (Figure 8) TODO: add description. \color{green}{Status rights: granted}}
+    \caption{\label{fig:guerrero_2016_pep}\citeauthor*{guerrero_2016_pep}~\cite{guerrero_2016_pep} (Figure 8) combine the exploration of pattern variations with a manual editing of single elements, \eg by drag and drop.}
 \end{figure}
