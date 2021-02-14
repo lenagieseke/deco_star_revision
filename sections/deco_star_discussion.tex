@@ -52,11 +52,11 @@ In terms of control mechanisms for a more complex design goal, shape fillings an
 
 Fields (in the context of this survey usually vector fields) constitute a powerful tool for combining an automatic procedural filling by individually designing regions on the canvas. As \citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef}, ~\citeauthor*{saputra_2017_ffo}~\cite{saputra_2017_ffo} and \citeauthor*{gieseke_2017_ooo}~\cite{gieseke_2017_ooo} show (\Cref{fig:fields}), the streamlines of a field can create curves as part of the pattern that fill and structure a space. The design of a vector field requires usually less manual work to fill a space in its entirety by inputing only a few curves that control, \eg~directionality, than the manual creation, \eg~drawing of all curves needed for the filling. Other global design choices, such as an overall growth direction or the alignment of elements, are simple to translate from a vector field to procedural generation rules.
 
-\begin{figure}[H]
+\begin{figure*}
     \centering
     \revimage{\includegraphics[width=\linewidth]{figures/discussion/fields.png}}
     \caption{\label{fig:fields}Different approaches to design vector fields for creative pattern generation. 1.~\citeauthor*{gieseke_2017_ooo}~\cite{gieseke_2017_ooo} (example from the supplemental video), 2.~\citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} (Figure 10) \color{orange}{Status rights: invoice received}\color{black}, 3.~\citeauthor*{saputra_2017_ffo}~\cite{saputra_2017_ffo} (Figure 14).}
-\end{figure}
+\end{figure*}
 
 The discussed work shows that fields allow for greater visual variation by opening the design space and transparent control for filling a space automatically. When designing a vector field, artists do not work with the pattern directly, but fields are intuitive to understand, \eg through a visual representation. Their abstraction translates to the model in a straightforward manner. Thus, using flow within a vector field to design is a suitable control mechanism, especially for designs that aims to align their elements to the space.
 
@@ -76,11 +76,11 @@ Curves and sketch-like methods offer a well communicated, hence transparent navi
 
 On the downside, curves and brushing could lead to manual and tedious creation requirements for patterns and unstructured results because creation techniques and design spaces are open. To balance this \citeauthor*{kazi_2012_vit}~\cite{kazi_2012_vit} and \citeauthor*{xing_2014_apr}~\cite{xing_2014_apr} (\Cref{fig:xing_2014_apr}) incorporate procedural creation principles for automatic fillings into a data-driven process. \citeauthor*{hsu_2020_aef}~\cite{hsu_2020_aef} offer through a brushing system transparent navigation and an open design space within the topic of element arrangements. \rev{}{The approach of~\citeauthor*{li_2020_sva}~\cite{li_2020_sva} links visual curve creation, code, and data in a unique manner, \eg by adding textual and numeric information about the underlying procedural algorithm to the canvas. The technique possibly increases a transparent and navigable workflow once an artist has learned the workflow. This novel approach calls for further investigation and verification.}
 
-\begin{figure}[H]
-    \centering
-    \revimage{\includegraphics[width=\linewidth]{figures/discussion/li_2020_sva.png}}
-    \caption{\label{fig:li_2020_sva}\citeauthor*{li_2020_sva}~\cite{li_2020_sva}s' technique (Figure 1) links visual output, data and code with (a) visualizations, (b) iconography, (c) inspection toggles, and (d) looping controls. \color{orange}{Status rights: requested}}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \revimage{\includegraphics[width=\linewidth]{figures/discussion/li_2020_sva.png}}
+%     \caption{\label{fig:li_2020_sva}\citeauthor*{li_2020_sva}~\cite{li_2020_sva}s' technique (Figure 1) links visual output, data and code with (a) visualizations, (b) iconography, (c) inspection toggles, and (d) looping controls. \color{orange}{Status rights: requested}}
+% \end{figure}
 
 
 In summary, with a brush an artist is free to draw almost anything - depending only on one's personal drawing capabilities. For creative pattern generation, however, also structure, pattern hierarchyies, and distribution techniques need to be supported. \revremove{}{Hence, element arrangements can only provide a subset - albeit an important one - of the design space needed for creative pattern generation.}
