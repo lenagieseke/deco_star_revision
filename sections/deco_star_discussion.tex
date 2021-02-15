@@ -4,10 +4,17 @@
 \subimport{tables/}{table_all}
 
 
+\begin{table}
+    \centering
+    \includegraphics[width=0.85\linewidth]{tables/table_timings.pdf}
+    \caption[Timings]{\label{table:timings} A rough categorization of timings in realtime, interactive, synchronous, asynchronous, and offline. Timings are taken from the authors' descriptions. A cross is used for work that the authors call interactive without giving specific timings.}
+\end{table}
+
+
 \section{Discussion and Creative Means}
 \label{sec:discussion_creative_means}
 
-Table~\ref{table:analysis} lists for the above discussed publications the control mechanisms, which are categorized in~\Cref{sec:taxo_control_mechanism}. For interrelating the control mechanisms to the control characteristics, we considered the same publications in Table~\ref{table:taxo_controlmechanism}. Due to the diversity of the underlying methods and the different design goals of the considered body of work, we believe this to be a representative summarization.
+Table~\ref{table:analysis} lists for the above discussed publications the control mechanisms, which are categorized in~\Cref{sec:taxo_control_mechanism}. \rev{Overview Timings}{Table~\ref{table:timings} compares performance timings and categories them in \textit{realtime}, \textit{interactive}, \textit{synchronous}, \textit{asynchronous}, and \textit{offline}}. For interrelating the control mechanisms to the control characteristics, we considered the same publications in Table~\ref{table:taxo_controlmechanism}. Due to the diversity of the underlying methods and the different design goals of the considered body of work, we believe this to be a representative summarization.
 
 \rev{Discussion Added}{Which design features the anlaysed work in Table~\ref{table:analysis} considers, indicates in summary a common tendency. A large body of work focuses on repetitive pattern designs and filling a space, usually automatically. The second most prominent group of work, focuses on curves and brushing, resulting in individual but potentially unstructured designs, usually created manually. Creative pattern designs, however, as for example the historic examples in \Cref{fig:historic_examples} show, include various spatial structures such as frames. Hence, neither overall repetition, nor painting-like methods are the most suitable solution to give creative freedom. instead, algorithms are needed that support artist to create structures creatively.}
 

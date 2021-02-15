@@ -12,7 +12,7 @@ For this goal, this survey focuses on procedural models as a basis, but it also 
 \subsection{Procedural}
 \label{subsec:models_procedural}
 
-\citeauthor*{ebert_2003_tmp}~\cite{ebert_2003_tmp} describe procedural techniques as algorithms and mathematical functions that synthesize a model or an effect. Solely equation-based representations are considered the ``purest'' form of procedural modeling~\cite{smelik_2014_aso}. This approach gained immediate importance in the early days of computer graphics. Analytical forms are able to reproduce many natural phenomena -such as wood, stone, water, smoke and plants- with only some lines of code in the range of kilobytes, hence being memory efficient. The main appeals of such procedural representation include its compactness in combination with being continuous, scalable and unbound to a specific resolution. \mf{Remove the following sentence? It does not contribute much.} While procedural generation techniques have been a constant basis for generating content for games, its characteristics of memory efficiency and unlimited resolution are more important than ever with the rise of virtual reality, for example.
+\citeauthor*{ebert_2003_tmp}~\cite{ebert_2003_tmp} describe procedural techniques as algorithms and mathematical functions that synthesize a model or an effect. Solely equation-based representations are considered the ``purest'' form of procedural modeling~\cite{smelik_2014_aso}. This approach gained immediate importance in the early days of computer graphics. Analytical forms are able to reproduce many natural phenomena -such as wood, stone, water, smoke and plants- with only some lines of code in the range of kilobytes, hence being memory efficient. The main appeals of such procedural representation include its compactness in combination with being continuous, scalable and unbound to a specific resolution. \mf{Remove the following sentence? It does not contribute much.}\legie{I think the sentence is a good reminder that e.g. modern HDMs such as the OcculusQuest have limited hardware and really need continous content and with that procedural models. In comparison, for e.g. VFX the mentioned characteristics are not really that relevant anymore and sometimes feel a bit old school.} While procedural generation techniques have been a constant basis for generating content for games, its characteristics of memory efficiency and unlimited resolution are more important than ever with the rise of virtual reality, for example.
 
 The compactness and efficiency of a procedural model also enable parameterization, resulting in the model being responsive and flexible. Parameters usually represent certain visual characteristics and their amplification. Parameterization brings the crucial benefit that, for example, textures remain editable throughout the entire visual effect production pipeline.
 
@@ -27,7 +27,7 @@ In the context of creative pattern generation, stochastic models build a basis f
 
 \paragraph*{Function-based Models} extend the class of stochastic models by layering and combining a variety of functions to form a visually complex pattern. Typical building blocks are periodic, spline, step, clamp and conditional functions~\cite{ebert_2003_tmp} and are the basis for regular patterns designs. 
 
-\mfcomment{Perlin's image synthesizer \cite{perlin_1985_ais} does some of that already, his hypertexture paper \cite{perlin_1989_hyp} quite explicitly so (albeit with a focus on implicit shapes in 3D)}
+% \mfcomment{Perlin's image synthesizer \cite{perlin_1985_ais} does some of that already, his hypertexture paper \cite{perlin_1989_hyp} quite explicitly so (albeit with a focus on implicit shapes in 3D)} LG: not sure what to do with this comment.
 
 \paragraph*{Rule-based Models} are part of individual, and often quite complex, generation systems that can be context-dependent and/or design-specific. Rule-based models are programs that relate to and partition the space to fill and follow propagation rules. The algorithmic core often handles proxy shapes, while for the result graphical elements, such as vector graphics, are mapped to the proxies. Rule-based procedural models are suitable for creative pattern generation and novel control mechanisms because their iterative generation logic is open and flexible~\cite{wong_1998_cgf, mech_2012_tdf}. They can implement any designs and include any elements. Moreover, within a suitable pipeline, they can potentially take global constraints into consideration and build structural hierarchies.
 
@@ -79,7 +79,9 @@ In addition to Islamic and Celtic designs, a variety of other pattern designs ha
 
 % %-------------------------------------------------------------------------
 
-\subsection{Summary}
-\label{subsec:models_summary}
+\revremove{Condensing}{
+    
+% \subsection{Summary}
+% \label{subsec:models_summary}
 
-To produce designs that include not only repetitive structures but also visual hierarchies and highlights for example, most procedural models in their "pure" form are too limited in their design variability. Data-driven models are more flexible in both their design space and creative control mechanisms. However, data-driven models are tedious, not suitable for automatically executing certain design rules, and they are limited in the data they use. The following review of the state of the art gives a detailed comparison of the capabilities for creative pattern generation.
+To produce designs that include not only repetitive structures but also visual hierarchies and highlights for example, most procedural models in their "pure" form are too limited in their design variability. Data-driven models are more flexible in both their design space and creative control mechanisms. However, data-driven models are tedious, not suitable for automatically executing certain design rules, and they are limited in the data they use. The following review of the state of the art gives a detailed comparison of the capabilities for creative pattern generation.}
