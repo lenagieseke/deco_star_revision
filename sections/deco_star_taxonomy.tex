@@ -78,14 +78,14 @@ The input can have \textit{global} influence, \textit{regional}, \eg~on a drawn 
 Input can be given \textit{before}, \textit{during} the creation process, when parts of the results are already visible \eg~with a painting mechanism, or \textit{after} the creation process. The result is visible to the artist and can be adjusted retrospectively.
 
 
-\noindent\textbf{Who (User)} gives the input in regard to the needed type of skill set. 
+\noindent\textbf{Who (User)} describes the input in regard to the needed type of skill set. 
 \begin{figure}[H]
     \centering
         \includegraphics[width=\controlParamsFigWidth\linewidth]{figures/control_paradigms/who.pdf}
         % \caption{Who can give the input? Which skill set is needed?}
 \end{figure}
 
-This category can be in part derived from the above characteristics of \textit{how} and \textit{what}. In most general terms, this category can be classified the skill set of a \textit{Programmer}, for giving, \eg~code as input, requiring analytical-formal and logical thinking and the ability to abstract. On the other end of the spectrum, the skill set of an \textit{Artist} is needed, \eg~for drawing, requiring intuitive-visual and spatial thinking and the ability to create. The \textit{who} category is listed here for completeness. The discussion of needed competencies, skills and mindsets, including the accompanying psychological and artistic aspects, is out of the scope of this survey, though.
+This category can be in part derived from the above characteristics of \textit{how} and \textit{what}. In most general terms, this category can be classified as the skill set of a \textit{Programmer}, for giving, \eg~code as input, requiring analytical-formal and logical thinking and the ability to abstract. On the other end of the spectrum, the skill set of an \textit{Artist} is needed, \eg~for drawing, requiring intuitive-visual and spatial thinking and the ability to create. The \textit{who} category is listed here for completeness. The discussion of needed competencies, skills and mindsets, including the accompanying psychological and artistic aspects, is out of the scope of this survey, though.
 
 \subsection{Control Mechanisms}\label{subsec:taxo_control_mechanism}
 Next to the above overall relevant factors for an artist using digital tools, we now classify the control mechanisms as they are described in the state of the art. These low-level mechanisms define what an artist can (or has to) work with and are specified for each reference in Table~\ref{table:analysis}. Because this survey focuses on interfacing algorithms, UI specifics, such as the layout of buttons, are not considered. For each mechanism we summarize the \textit{how}, \textit{what}, \textit{where} and \textit{when} characteristics over all reviewed publications and with that show the connections and capabilities of the different control mechanisms and potential trade-offs between approaches in Table~\ref{table:taxo_controlmechanism}.
@@ -113,14 +113,14 @@ Next to the above overall relevant factors for an artist using digital tools, we
 \begin{itemize}
     \item \textit{Visualization}: Any type of visual interface that goes beyond the standard UI elements, such as sliders and buttons.
     \item \textit{Image-Based}: Images as indirect control input, such as pixel data masks.
-    \item \textit{Sketch-Based}: Sketches and curves directly put on the canvas - for example, the drawing of a mask with a pen tool.
+    \item \textit{Sketch-Based}: Sketches and curves \rev{Better explanation, review 5}{defining indirect control elements} on the canvas - for example, the drawing of a mask with a pen tool.
 \end{itemize}
 
 \noindent\textbf{Filling}
 \begin{itemize}
     \item \textit{Shapes}: A space to fill (\eg~a specific shape).
     \item \textit{Masking}: Areas within the shape to fill that should remain unaffected.
-    \item \textit{Curves to Fill}: A one-dimensional curve or path to be filled. The curve is given as a whole before the filling starts.
+    \item \textit{Curves to Fill}: A one-dimensional curve or path to be \rev{}{filled with elements of the pattern}. The curve is given as a whole before the filling starts.
     % \mf{Can you actually “fill” a (1D) curve? Should we say: “follow a curve” instead?} LG: I would prefer to leave is as "filling" as "following" doesn't fit into the text well.
 \end{itemize}
 
