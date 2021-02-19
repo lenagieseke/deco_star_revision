@@ -192,9 +192,9 @@
 Dear Reviewers,
 
 
-thank you for your thorough and insightful feedback. With this minor revision, we hope to address the main concerns raised. The changes we made in this submission to address the issues are colored in green. The superscript comments indicate the type of change. Furthermore, we summarize our revisions in this letter.
+Thank you for your thorough and insightful feedback. With this minor revision, we hope to address the main concerns raised. The changes we made in this submission to address the issues are colored in green. Superscript comments indicate the type of change. Furthermore, we summarize our revisions in this letter.
 
-In summary, you addressed the following issues:
+In summary, we addressed the following issues:
 
 % \mfcomment{I would propose to remove the bullet point list here, as our response to each of the items is brief.}
 
@@ -218,7 +218,7 @@ In summary, you addressed the following issues:
     }
 \end{quote}
 
-\rev{}{We made a detailed pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text.}
+\rev{}{We made a detailed pass through Section 7, condensing details into higher-level descriptions. Please see the revision comments in the text.}
 
 \begin{quote}
 \emph{
@@ -236,7 +236,7 @@ In summary, you addressed the following issues:
     }
 \end{quote}
 
-\rev{}{We intended to highlight the identified visual features on the example of ornamentation. Based on the feedback of the reviewers, we understand now that ornamentation is not as directly translatable and understandable as we have thought. Hence, in the revision, we substitute Section 5.1 with more detailed explanations of the visual features. Specifically, we added a subsection for each feature, explaining it in the text and a visual example coming from the related work.}
+\rev{}{We intended to highlight the identified visual features on the example of ornamentation. Based on the feedback of the reviewers, we understand now that ornamentation is not as directly translatable and understandable as we had thought. Hence, in the revision, we changed Section 5.1 into a more detailed explanations of the visual features. Specifically, we added a subsection for each feature, explaining it in the text and giving a visual example from the related work.}
 
 
 \begin{quote}
@@ -266,7 +266,7 @@ In summary, you addressed the following issues:
 \emph{First, I would have liked to have shorter descriptions of the various methods listed. Right now, the descriptions are too long for the paper, but still too short to fully understand them algorithmically.}
 \end{quote}
 
-\rev{}{We made a thorough pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text.}
+\rev{}{We made a thorough pass through Section 7, condensing details into higher-level descriptions. Please see the revision comments in the text.}
 
 
 \begin{quote}
@@ -307,7 +307,7 @@ For me it would really make this STAR a stronger contribution.}
 \end{quote}
 
 
-\rev{}{We added an abstracted comparison of timings in Table 2. The table gives a rough overview of the performances and also lists the publications years. This hopefully helps for a correct interpretation of the results. We have decided not to provide an asymptotic runtime analysis for two reasons: the works covered in this STAR cover such a wide range of applications that measures such as image resolution (for vector graphics?) or number of elements (what constitutes an element in which context?) are not immediately transferable; also, most works covered in the STAR do not provide asymptotic performance results, and a thorough analysis of potential implementations and their performance is not feasible in a STAR context.}
+\rev{}{We added an abstract comparison of timings in Table 2. The table gives a rough overview of performance and also lists the publication year. This hopefully enables a more meaningful interpretation of the results. We have decided not to provide an asymptotic runtime analysis for two reasons: the work covered in this STAR covers such a wide range of applications that measures such as image resolution (not applicable to vector graphics) or number of elements (what constitutes an element in which context?) are not immediately transferable. Also, most works covered in the STAR do not provide asymptotic performance results, and a thorough analysis of potential implementations and their performance is not feasible in a STAR context.}
 
 \begin{quote}
 \emph{Less important: Section 6.4 is a summary but does not really seem to be linked with what is said before. It gives the impression that it is a personal opinion, not a consequence of the studied papers. Section 8.5 is partly redundant with already written parts of Section 7. Finally several typos remain so a precise proof read will be needed for the final version.}
@@ -323,7 +323,7 @@ For me it would really make this STAR a stronger contribution.}
 \emph{Although the main point is the control mechanism, the generated pattern figure may be too few. Authors may add some representative results for each design feature to build the connection to the control mechanisms.}
 \end{quote}
 
-\rev{}{We added figures for both, design features and interaction mechanisms.}
+\rev{}{We added figures for both design features and interaction mechanisms.}
 
 
 \subsection*{Reviewer 4} 
@@ -332,14 +332,14 @@ For me it would really make this STAR a stronger contribution.}
 \emph{This survey is also surprisingly short of pictures for a description of an inherently visual task. The presentation could be markedly improved by shortening the textual descriptions and including visual references in order to contrast and illustrate the approaches. (This would also improve the STAR's usefulness as a sort of "visual dictionary" for practitioners, who could skim the images to find an example close to what they are trying to achieve and then read about the technique that created it and similar approaches.)}
 \end{quote}
 
-\rev{}{We made a thorough pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text. Also, we added figures for both design features as well as interaction mechanisms.}
+\rev{}{We made a thorough pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text. Also, we added figures for both design features and interaction mechanisms.}
 
 \begin{quote}
 \emph{I appreciate that the authors have gone to the trouble of reporting timing information for many of the methods in their short descriptions thereof. It would be nice to include this information in a summative table of some sort (perhaps Table 1?), where it would be easier to compare between approaches.}
 \end{quote}
 
 
-\rev{}{We added an abstracted comparison of timings in Table 2.}
+\rev{}{We added an abstract comparison of timings in Table 2.}
 
 \begin{quote}
 \emph{I was not sure of the purpose of section 5.1 (ornamentation) when I reached it in the text. Perhaps better signposting is in order? (That said, I'm still not quite sure of the purpose Section -- I don't know what I gained from reading it in terms of my understanding of the presented approaches.)}
@@ -360,7 +360,11 @@ seem to be about generating patterns under brush-based artist control. Well, per
 
     [HWYZ20]  HSU, CHEN-YUAN, WEI, LI-YI, YOU, LIHUA, and ZHANG, JIANJUN. "Autocomplete Element Fields". Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems. ACM, 2020, 1-13.
 
-    In the revised version of the STAR, we further contextualize the above reference and refer to the overall approach of brush-based or region-guided texture synthesis.
+    In the revised version of the STAR, we added
+    
+    M. Lukáč, J. Fišer, P. Asente, J. Lu, E. Shechtman, and D. Sýkora. 2015. Brushables: Example-based Edge-aware Directional Texture Painting. Comput. Graph. Forum 34, 7 (October 2015), 257–267. DOI:https://doi.org/10.1111/cgf.12764
+    
+    and further contextualize the above reference and refer to the overall approach of brush-based or region-guided texture synthesis.
 }
 
 
@@ -370,7 +374,7 @@ seem to be about generating patterns under brush-based artist control. Well, per
 \emph{1. Section 3.2, the categories of "Filling" and "Handling" is somehow confusing, Because for the method of filling or tiling or compositing pattern patterns along a certain curve, sketch-based UI can basically be supported.}
 \end{quote}
 
-\rev{Comment}{Yes, we agree that our explanation is not clear in the submission. We changed the text to communicate the different categories better.}
+\rev{}{Yes, we agree that our explanation is not clear in the submission. We changed the text to communicate the different categories better.}
 
 \begin{quote}
 \emph{2.It is best to add more practical algorithmic suggestions. Perhaps the author has obtained this information during extensive research and writing this article, so it should be marked more prominently in the article.}
@@ -393,7 +397,7 @@ At the bottom of Page 3:  In most general terms, this category can be classified
 
 
 \rev{}{
-    We added references (1) and (2), thank you for these suitable additions. Reference (3) was already included in the first version of the propsed STAR.
+    We added references (1) and (2), thank you for these suitable additions. Reference (3) was already included in the first version.
 }
 
 
