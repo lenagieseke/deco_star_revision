@@ -7,7 +7,7 @@
 % if we want more space
 %
 % \documentclass[a4paper]{article}
-% \usepackage{setspace} 
+\usepackage{setspace} 
 % 
 % (also, would need to remove the titling commands)
 
@@ -175,7 +175,10 @@
 
 % if we want more space between the lines for readability:
 % \onehalfspacing
+% This gives me an error
+
 \onecolumn % remove? – Martin
+
 
 
 \maketitle
@@ -185,55 +188,74 @@
 %-------------------------------------------------------------------------
 
 
+
 \section*{Letter To The Reviewers}
 
-\rev{}{Dear Reviewers,
+Dear Reviewers,
 
 
-thank you for your thorough and insightful feedback. With this minor revision, we hope to address the main concerns raised. In summary, you addressed the following issues:
+thank you for your thorough and insightful feedback. With this minor revision, we hope to address the main concerns raised. The changes we made in this submission to address the above issues are colored in green. The superscript comments indicate the type of change. Furthermore, we summarize our revisions in the following section.
 
-\mfcomment{I would propose to remove the bullet point list here, as our response to each of the items is brief.}
+In summary, you addressed the following issues:
 
-\begin{itemize}
-    \item A good balance between high-level descriptions and details in the method descriptions should be found to avoid confusion.
-    \item Adding an overall critical analysis, practical algorithmic suggestions, and comparison of the various methods and the timings
-    \item Potential rewriting of Section 5 according to the reviewer's suggestion, in particular, clarification of the purpose of Section 5.1 (ornamentation)
-    \item Adding substantially more visual references, including representative results for design features related to generated patterns and potentially also videos as supplementary material to better communicate interactive methods.
-    \item Performance of a thorough editing pass to check for grammar and clean-up of the sentence structure.
-\end{itemize}
+% \mfcomment{I would propose to remove the bullet point list here, as our response to each of the items is brief.}
 
-The changes we made in this submission to address the above issues are colored in green. The superscript comments indicate the type of change. Furthermore, we summarize our revisions in the following section.}
+% \begin{itemize}
+%     \item A good balance between high-level descriptions and details in the method descriptions should be found to avoid confusion.
+%     \item Adding an overall critical analysis, practical algorithmic suggestions, and comparison of the various methods and the timings
+%     \item Potential rewriting of Section 5 according to the reviewer's suggestion, in particular, clarification of the purpose of Section 5.1 (ornamentation)
+%     \item Adding substantially more visual references, including representative results for design features related to generated patterns and potentially also videos as supplementary material to better communicate interactive methods.
+%     \item Performance of a thorough editing pass to check for grammar and clean-up of the sentence structure.
+% \end{itemize}
 
-\subsection*{Balancing High-Level Descriptions And Details}
+% .
 
-\mfcomment{Proposal for visual communication: in some ways, this letter forms part of a dialog with the reviewers. We currently highlight our replies in green. To me, it would look better if we used a different form of highlighting; for the abstract-level comments, I would not highlight the response in any way, as it forms part of the same text we are writing, for the reviews, I would quote the paragraphs we respond to and add emphasis, e.g. }
+% \subsection*{Balancing High-Level Descriptions And Details}
+
+% \mfcomment{Proposal for visual communication: in some ways, this letter forms part of a dialog with the reviewers. We currently highlight our replies in green. To me, it would look better if we used a different form of highlighting; for the abstract-level comments, I would not highlight the response in any way, as it forms part of the same text we are writing, for the reviews, I would quote the paragraphs we respond to and add emphasis, e.g. }
 
 \begin{quote}
 \emph{
-    You should totally be more awesome!
+    A good balance between high-level descriptions and details in the method descriptions should be found to avoid confusion.
     }
 \end{quote}
-Now, we are.
-
-% \mfcomment{… I also concur with Bedrich: we should only keep the review paragraphs we respond to.}
-
 
 \rev{}{We made a detailed pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text.}
 
-\subsection*{Adding An Overall Critical Analysis}
+\begin{quote}
+\emph{
+    Adding an overall critical analysis, practical algorithmic suggestions, and comparison of the various methods and the timings.
+    }
+\end{quote}
 
 \rev{}{We added a new table to compare the timings of the analyzed methods. We expanded the discussion section and added some critical and algorithmic analyses.}
 % TODO: Here we need a bit more, I think
 
-\subsection*{Rewriting Of Section 5}
+
+\begin{quote}
+\emph{
+    Potential rewriting of Section 5 according to the reviewer's suggestion, in particular, clarification of the purpose of Section 5.1 (ornamentation).
+    }
+\end{quote}
 
 \rev{}{We intended to highlight the identified visual features on the example of ornamentation. Based on the feedback of the reviewers, we understand now that ornamentation is not as directly translatable and understandable as we have thought. Hence, in the revision, we substitute Section 5.1 with more detailed explanations of the visual features. Specifically, we added a subsection for each feature, explaining it in the text and a visual example coming from the related work.}
 
-\subsection*{Adding Visual References}
+
+\begin{quote}
+\emph{
+    Adding substantially more visual references, including representative results for design features related to generated patterns and potentially also videos as supplementary material to better communicate interactive methods.
+    }
+\end{quote}
+
 
 \rev{}{We added additional visual references for both the design features and showcasing interactive methods.}
 
-\subsection*{Thorough Editing}
+\begin{quote}
+\emph{
+    Performance of a thorough editing pass to check for grammar and clean-up of the sentence structure.
+    }
+\end{quote}
+
 
 \rev{}{We thoroughly edited the document and hoped to have caught all issues. The editing changes are not colored in the submission.}
 
@@ -242,74 +264,99 @@ Now, we are.
 
 \subsection*{Reviewer 1} 
 
-First, I would have liked to have shorter descriptions of the various methods listed. Right now, the descriptions are too long for the paper, but still too short to fully understand them algorithmically.
+\begin{quote}
+\emph{First, I would have liked to have shorter descriptions of the various methods listed. Right now, the descriptions are too long for the paper, but still too short to fully understand them algorithmically.}
+\end{quote}
 
-\rev{Comment}{We made a thorough pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text.}
+\rev{}{We made a thorough pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text.}
 
-Second, I would have liked to see a section of overall critical analysis of the various methods, at least as the authors see them. I realize that for a STAR, this may not be fruitful, but still, I think it would help to get a sense of which method appear to work better than others.
 
-\rev{Comment}{We expanded the discussion and added more critical analysis.}
+\begin{quote}
+\emph{Second, I would have liked to see a section of overall critical analysis of the various methods, at least as the authors see them. I realize that for a STAR, this may not be fruitful, but still, I think it would help to get a sense of which method appear to work better than others.}
+\end{quote}
+
+
+\rev{}{We expanded the discussion and added more critical analysis.}
 % TODO: well, somewhat critical... do we need more here?
 
-Third, it is quite hard to discuss interfaces and authored input without a video for the interactive methods. This is obviously beyond the scope of this paper. Still, I would suggest the authors keep this in mind for the presentation.
+\begin{quote}
+\emph{Third, it is quite hard to discuss interfaces and authored input without a video for the interactive methods. This is obviously beyond the scope of this paper. Still, I would suggest the authors keep this in mind for the presentation.}
+\end{quote}
 
-\rev{Comment}{We added some visual examples in Section 8, which communicate control mechanisms further.}
+\rev{}{We added some visual examples in Section 8, which communicate control mechanisms further.}
 
 
 
 \subsection*{Reviewer 2}
 
+\begin{quote}
+\emph{On the weakness side, I have been a bit frustrated by the lack of assessments in Section 7 itself. The authors could make clear statements of what they think about each work they describe. In its current version this section is an interesting list of previous work but I think that what is formalized in the previous sections could be used more explicitly to discuss the strength and weakness of each papers regarding the goal stated by the authors. 
+For me it would really make this STAR a stronger contribution.}
+\end{quote}
 
-On the weakness side, I have been a bit frustrated by the lack of assessments in Section 7 itself. The authors could make clear statements of what they think about each work they describe. In its current version this section is an interesting list of previous work but I think that what is formalized in the previous sections could be used more explicitly to discuss the strength and weakness of each papers regarding the goal stated by the authors. 
-For me it would really make this STAR a stronger contribution.
+\rev{}{\color{red}TODO: this is not yet done well.}
 
-\rev{Comment}{\color{red}TODO: this is not yet done well.}
+\begin{quote}
+\emph{To improve the writing, I would suggest to rewrite Section 5. I find it unclear because it does not really explain the creative features it lists. And I do not see the goal of Section 5.1. It does not help to better understand the features and put the focus on a specific type of patterns whereas one of the strength of this STAR is to cover a very wide type of patterns.}
+\end{quote}
 
 
-To improve the writing, I would suggest to rewrite Section 5. I find it unclear because it does not really explain the creative features it lists. And I do not see the goal of Section 5.1. It does not help to better understand the features and put the focus on a specific type of patterns whereas one of the strength of this STAR is to cover a very wide type of patterns. 
+\rev{}{We rewrote Section 5 to explain the design features better, and we took out ornamentation as a specific pattern example.}
 
-\rev{Comment}{We rewrote Section 5 to explain the design features better, and we took out ornamentation as a specific pattern example.}
+\begin{quote}
+\emph{Maybe a discussion should be made about the timings given in Section 7. We all know that the timings change with the evolution of the GPUs and CPUs. So maybe a more abstract evaluation of the computation time (like O(n) with n the image resolution or the elements number) would be a better comparison tool. I understand that it may be not be very easy to provide but at least it has to be discussed.}
+\end{quote}
 
-Maybe a discussion should be made about the timings given in Section 7. We all know that the timings change with the evolution of the GPUs and CPUs. So maybe a more abstract evaluation of the computation time (like O(n) with n the image resolution or the elements number) would be a better comparison tool. I understand that it may be not be very easy to provide but at least it has to be discussed.
 
-\rev{Comment}{We added an abstracted comparison of timings in Table 2. The table gives a rough overview of the performances and also lists the publications years. This hopefully helps for a correct interpretation of the results. We have decided not to provide an asymptotic runtime analysis for two reasons: the works covered in this STAR cover such a wide range of applications that measures such as image resolution (for vector graphics?) or number of elements (what constitutes an element in which context?) are not immediately transferable; also, most works covered in the STAR do not provide asymptotic performance results, and a thorough analysis of potential implementations and their performance is not feasible in a STAR context.}
+\rev{}{We added an abstracted comparison of timings in Table 2. The table gives a rough overview of the performances and also lists the publications years. This hopefully helps for a correct interpretation of the results. We have decided not to provide an asymptotic runtime analysis for two reasons: the works covered in this STAR cover such a wide range of applications that measures such as image resolution (for vector graphics?) or number of elements (what constitutes an element in which context?) are not immediately transferable; also, most works covered in the STAR do not provide asymptotic performance results, and a thorough analysis of potential implementations and their performance is not feasible in a STAR context.}
 
-Less important: Section 6.4 is a summary but does not really seem to be linked with what is said before. It gives the impression that it is a personal opinion, not a consequence of the studied papers. Section 8.5 is partly redundant with already written parts of Section 7.
-Finally several typos remain so a precise proof read will be needed for the final version.
+\begin{quote}
+\emph{Less important: Section 6.4 is a summary but does not really seem to be linked with what is said before. It gives the impression that it is a personal opinion, not a consequence of the studied papers. Section 8.5 is partly redundant with already written parts of Section 7. Finally several typos remain so a precise proof read will be needed for the final version.}
+\end{quote}
 
-\rev{Comment}{We agree with these remarks and removed and changed the sections accordingly.}
+\rev{}{We agree with these remarks and removed and changed the sections accordingly. We also thoroughly edited the document and hope to have caught all issues.}
 
 
 \subsection*{Reviewer 3}
 
 
-Although the main point is the control mechanism, the generated pattern figure may be too few. Authors may add some representative results for each design feature to build the connection to the control mechanisms.
+\begin{quote}
+\emph{Although the main point is the control mechanism, the generated pattern figure may be too few. Authors may add some representative results for each design feature to build the connection to the control mechanisms.}
+\end{quote}
 
-\rev{Comments}{We added figures for both, design features and interaction mechanisms.}
+\rev{}{We added figures for both, design features and interaction mechanisms.}
 
 
 \subsection*{Reviewer 4} 
 
-This survey is also surprisingly short of pictures for a description of an inherently visual task. The presentation could be markedly improved by shortening the textual descriptions and including visual references in order to contrast and illustrate the approaches. (This would also improve the STAR's usefulness as a sort of "visual dictionary" for practitioners, who could skim the images to find an example close to what they are trying to achieve and then read about the technique that created it and similar approaches.)
+\begin{quote}
+\emph{This survey is also surprisingly short of pictures for a description of an inherently visual task. The presentation could be markedly improved by shortening the textual descriptions and including visual references in order to contrast and illustrate the approaches. (This would also improve the STAR's usefulness as a sort of "visual dictionary" for practitioners, who could skim the images to find an example close to what they are trying to achieve and then read about the technique that created it and similar approaches.)}
+\end{quote}
 
-\rev{Comment}{We made a thorough pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text. Also, we added figures for both design features as well as interaction mechanisms.}
+\rev{}{We made a thorough pass through Section 7, condensing details to higher-level descriptions. Please see the revision comments in the text. Also, we added figures for both design features as well as interaction mechanisms.}
 
-I appreciate that the authors have gone to the trouble of reporting timing information for many of the methods in their short descriptions thereof. It would be nice to include this information in a summative table of some sort (perhaps Table 1?), where it would be easier to compare between approaches.
-
-\rev{Comment}{We added an abstracted comparison of timings in Table 2.}
-
-I was not sure of the purpose of section 5.1 (ornamentation) when I reached it in the text. Perhaps better signposting is in order? (That said, I'm still not quite sure of the purpose Section -- I don't know what I gained from reading it in terms of my understanding of the presented approaches.)
-
-\rev{Comment}{We rewrote Section 5 to explain the design features better and we took out ornamentation as specific pattern example.}
+\begin{quote}
+\emph{I appreciate that the authors have gone to the trouble of reporting timing information for many of the methods in their short descriptions thereof. It would be nice to include this information in a summative table of some sort (perhaps Table 1?), where it would be easier to compare between approaches.}
+\end{quote}
 
 
-\paragraph*{Quality of References:} At risk of expanding the domain further, and with acknowledgement that the authors have sought to keep the focus away from data-driven pixel-pushing approaches,  it seems like brush-based or region-guided texture synthesis approaches might fit into the overall picture. For example, work like:
+\rev{}{We added an abstracted comparison of timings in Table 2.}
+
+\begin{quote}
+\emph{I was not sure of the purpose of section 5.1 (ornamentation) when I reached it in the text. Perhaps better signposting is in order? (That said, I'm still not quite sure of the purpose Section -- I don't know what I gained from reading it in terms of my understanding of the presented approaches.)}
+\end{quote}
+
+\rev{}{We rewrote Section 5 to explain the design features better and we took out ornamentation as specific pattern example.}
+
+\begin{quote}
+\emph{At risk of expanding the domain further, and with acknowledgement that the authors have sought to keep the focus away from data-driven pixel-pushing approaches,  it seems like brush-based or region-guided texture synthesis approaches might fit into the overall picture. For example, work like:
 https://grail.cs.washington.edu/projects/painting-with-texture/
 and https://nvlabs.github.io/SPADE/
 (to name two of a host of examples)
-seem to be about generating patterns under brush-based artist control. Well, perhaps more the former than the latter, but I think you could draw the dividing line a bit wider.
+seem to be about generating patterns under brush-based artist control. Well, perhaps more the former than the latter, but I think you could draw the dividing line a bit wider.}
+\end{quote}
 
-\rev{Comment}{
+\rev{}{
     Brush-based or region-guided texture synthesis approaches are indeed closely related to the topic of the proposed STAR. We see this approach represented in our section about brush-based element texture synthesis and the included recent references of 
 
     [HWYZ20]  HSU, CHEN-YUAN, WEI, LI-YI, YOU, LIHUA, and ZHANG, JIANJUN. "Autocomplete Element Fields". Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems. ACM, 2020, 1-13.
@@ -320,34 +367,33 @@ seem to be about generating patterns under brush-based artist control. Well, per
 
 \subsection*{Reviewer 5} 
 
-1. Section 3.2, the categories of "Filling" and "Handling" is somehow confusing, Because for the method of filling or tiling or compositing pattern patterns along a certain curve, sketch-based UI can basically be supported.
+\begin{quote}
+\emph{1. Section 3.2, the categories of "Filling" and "Handling" is somehow confusing, Because for the method of filling or tiling or compositing pattern patterns along a certain curve, sketch-based UI can basically be supported.}
+\end{quote}
 
 \rev{Comment}{Yes, we agree that our explanation is not clear in the submission. We changed the text to communicate the different categories better.}
 
-2.It is best to add more practical algorithmic suggestions. Perhaps the author has obtained this information during extensive research and writing this article, so it should be marked more prominently in the article.
+\begin{quote}
+\emph{2.It is best to add more practical algorithmic suggestions. Perhaps the author has obtained this information during extensive research and writing this article, so it should be marked more prominently in the article.}
+\end{quote}
 
-\rev{Comment}{We expanded the discussion and added more algorithmic suggestions.}
+\rev{}{We expanded the discussion and added more algorithmic suggestions.}
 % TODO: well, somewhat algorithmic... do we need more here?
 
-\paragraph*{Clarity of Exposition:} It is well written.  A few places need to be improved.
-At the bottom of Page 3:  In most general terms, this category can be classified  "AS" the skill set of a Programmer.
+\begin{quote}
+\emph{It is well written.  A few places need to be improved.
+At the bottom of Page 3:  In most general terms, this category can be classified  "AS" the skill set of a Programmer.}
+\end{quote}
 
-\rev{}{We thouroughly edited the document and hope to have caught all issues.}
+\rev{}{We thoroughly edited the document and hope to have caught all issues.}
 
-\
-\paragraph*{Quality of References:} Mostly Adequate with only a few missing references:
-(1)
-Procedural band patterns . Jimmy Etienne, Sylvain Lefebvre
-ACM Symposium on Interactive 3D Graphics and Games 2020
 
-(2).Structure and Appearance Optimization for Controllable Shape Design.
-Jonàs Martínez, Jérémie Dumas, Sylvain Lefebvre, Li-Yi Wei
-ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia) 2015
+\begin{quote}
+\emph{Mostly Adequate with only a few missing references: (1) Procedural band patterns . Jimmy Etienne, Sylvain Lefebvre, ACM Symposium on Interactive 3D Graphics and Games 2020. (2)Structure and Appearance Optimization for Controllable Shape Design. Jonas Martinez, Jaramie Dumas, Sylvain Lefebvre, Li-Yi Wei, ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia) 2015. (3)Tile-based Pattern Design with Topology Control. Xiaojun Bian, Li-Yi Wei, Sylvain, I3D 2018t.}
+\end{quote}
 
-(3)Tile-based Pattern Design with Topology Control.Xiaojun Bian, Li-Yi Wei, Sylvain Lefebvre
-I3D 2018t
 
-\rev{Comment}{
+\rev{}{
     We added references (1) and (2), thank you for these suitable additions. Reference (3) was already included in the first version of the propsed STAR.
 }
 
@@ -366,7 +412,7 @@ I3D 2018t
 
 
 
-\printbibliography
+% \printbibliography
 %-------------------------------------------------------------------------
 
 \end{document}
