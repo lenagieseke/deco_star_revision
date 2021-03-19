@@ -103,13 +103,13 @@
 \newcommand{\revstatus}[1]{\color{orange}{#1}\color{black}}
 
 \usepackage{ifthen}
-\newcommand{\showcomments}{1}  % <------------------- COMMENT THIS LINE TO REMOVE REVISION COLORING
+%\newcommand{\showcomments}{1}  % <------------------- COMMENT THIS LINE TO REMOVE REVISION COLORING
 \ifthenelse{\isundefined{\showcomments}}
 {
 \renewcommand{\rev}[2]{{#2}}
 \renewcommand{\revremove}[2]{}
 \renewcommand{\revimage}[1]{{#1}}
-\newcommand{\revstatus}[1]{}
+\renewcommand{\revstatus}[1]{}
 }{}
 
 %BBs

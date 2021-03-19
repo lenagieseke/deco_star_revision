@@ -10,7 +10,7 @@ The following taxonomy lays groundwork for our later evaluation of control mecha
 \newcommand{\controlParamsFigWidth}{0.9}
 
 \subsection{Control Characteristics}\label{control_charateristics}
-A creation process can be described by answering the questions of \textit{how}, \textit{what}, \textit{where}, \textit{when} and \textit{who}. These characteristics can be discussed in various creation contexts and could even be translated to traditional media such as aquarell on paper.
+A creation process can be described by answering the questions of \textit{how}, \textit{what}, \textit{where}, \textit{when} and \textit{who}. These characteristics can be discussed in various creation contexts and could even be translated to traditional media such as water color on paper.
 
 \noindent\textbf{How (User Interaction)} is a control executed or an input given by an artist? How detached is it from the visual result on the canvas? 
 
@@ -25,8 +25,8 @@ A creation process can be described by answering the questions of \textit{how}, 
     \item \textit{Separate UI}: A separate UI is given through which an artist gives input and activates states. Separate UIs are often in close proximity to the canvas, carefully designed and easily usable. However, because they detach the work from the actual output, separate UIs have a level of indirection. 
     An artist must actively translate the interaction with the separate UI to the resulting output on the canvas.
     % \mf{I would propose to \emph{always} use “separate UI” instead of “UI”. Outside our field, both external files and on-canvas techniques constitute possible interfaces}
-    \item \textit{On canvas}: Controls are executed directly on the output canvas. Most of them require activating or selecting a tool in a separate UI, such as selecting a pen for drawing on a canvas. 
-    There are cases where controls cannot clearly be classified as either separate UI or on canvas. A pen, for example, can have different characteristics that an artist needs to set in the UI. The adjustment of settings should be as seamlessly integrated into an on-canvas tool as possible (\eg with choices appearing as tool tips). 
+    \item \textit{On-Canvas}: Controls are executed directly on the output canvas. Most of them require activating or selecting a tool in a separate UI, such as selecting a pen for drawing on a canvas. 
+    There are cases where controls cannot clearly be classified as either separate UI or on-canvas. A pen, for example, can have different characteristics that an artist needs to set in the UI. The adjustment of settings should be as seamlessly integrated into an on-canvas tool as possible (\eg with choices appearing as tool tips). 
 \end{itemize}
 
 
@@ -39,7 +39,7 @@ A creation process can be described by answering the questions of \textit{how}, 
 
 \begin{itemize}
     \item \textit{Code}: Input is a syntactically structured formal language.
-    \item \textit{Value}: The input is a single value, chosen from a range - for example, with a slider.
+    \item \textit{Value}: The input is a single value, chosen from a range---for example, with a slider.
     \item \textit{Intermediate}: The input is visual but abstract, such as sketching a mask or arrows for directionality. Artists still have to interpret how the input affects the result.
     \item \textit{Element}: The input is a component of the resulting pattern.
 \end{itemize}
@@ -77,7 +77,7 @@ The input can have \textit{global} influence, \textit{regional}, \eg on a drawn 
 Input can be given \textit{before} the creation process, \textit{during} it when parts of the results are already visible, or \textit{after}, when the result is visible and can be adjusted retrospectively.
 
 
-\noindent\textbf{Who (User)} describes the skill set needed to provide the input. 
+\noindent\textbf{Who (User)} has the skill set needed to provide the input? 
 \begin{figure}[H]
     \centering
         \includegraphics[width=\controlParamsFigWidth\linewidth]{figures/control_paradigms/who.pdf}
@@ -87,7 +87,7 @@ Input can be given \textit{before} the creation process, \textit{during} it when
 This category can be in part derived from the above characteristics of \textit{how} and \textit{what}. In most general terms, this category can be classified as the skill set of a \textit{Programmer}, for giving, \eg code as input, requiring analytical-formal and logical thinking and the ability to abstract. On the other end of the spectrum, the skill set of an \textit{Artist} is needed, \eg for drawing, requiring intuitive-visual and spatial thinking and the ability to create. The \textit{who} category is listed here for completeness. The discussion of needed competencies, skills and mindsets, including the accompanying psychological and artistic aspects, is out of the scope of this survey.
 
 \subsection{Control Mechanisms}\label{subsec:taxo_control_mechanism}
-We now classify the control mechanisms as they are described in the state of the art. These low-level mechanisms define what an artist can or must work with and are specified for each reference in Table~\ref{table:analysis}. Because this survey focuses on algorithms, UI specifics, such as the layout of buttons, are not considered. For each mechanism we summarize the \textit{how}, \textit{what}, \textit{where} and \textit{when} characteristics over all reviewed publications and with that show in Table~\ref{table:taxo_controlmechanism} connections and capabilities of different control mechanisms and potential trade-offs between approaches.
+We now classify the control mechanisms as they are described in the state of the art. These low-level mechanisms define what an artist can or must work with and are specified for each reference in Table~\ref{table:analysis}. Because this survey focuses on algorithms, UI specifics, such as the layout of buttons, are not considered. For each mechanism we summarize the \textit{how}, \textit{what}, \textit{where} and \textit{when} characteristics over all reviewed publications and with that show, in Table~\ref{table:taxo_controlmechanism}, connections and capabilities of different control mechanisms and potential trade-offs between approaches.
 
 \noindent\textbf{Initialization}
 \begin{itemize}
@@ -98,8 +98,8 @@ We now classify the control mechanisms as they are described in the state of the
 \noindent\textbf{Exemplars}
 \begin{itemize}
     \item \textit{Image}: An example image that should be matched in its entirety. Examples are usually pixel data.
-    \item \textit{Element Arrangement}: An example element arrangement that should be matched in its entirety. Elements are usually separate shapes and might carry additional data.
-    \item \textit{Element}: One specific, individual asset that becomes in the result part of a whole. Elements can be shapes or pixel data.
+    \item \textit{Element Arrangement}: An example element arrangement that should be matched in its entirety. Elements in the arrangement are usually separate shapes and might carry additional data.
+    \item \textit{Element}: One specific, individual asset that becomes part of the result. Elements can be shapes or pixel data.
 \end{itemize}
 
 \noindent\textbf{Parameterization}
@@ -117,7 +117,7 @@ We now classify the control mechanisms as they are described in the state of the
 
 \noindent\textbf{Filling}
 \begin{itemize}
-    \item \textit{Shapes}: A space to fill, \eg a specific shape).
+    \item \textit{Shapes}: A space to fill, usually a specific shape.
     \item \textit{Masking}: Areas within the shape to fill that should remain unaffected.
     \item \textit{Curves}: A one-dimensional curve or path to be \rev{}{followed with elements of the pattern}. The curve is given as a whole before the generation starts.
     % \mf{Can you actually “fill” a (1D) curve? Should we say: “follow a curve” instead?} LG: I would prefer to leave is as "filling" as "following" doesn't fit into the text well.
